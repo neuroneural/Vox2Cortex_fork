@@ -25,9 +25,15 @@ git \
 wget \
 cmake \
 openjdk-8-jdk \
-libaio-dev && \
-apt-get install -y --no-install-recommends llvm-10 lldb-10 llvm-10-dev libllvm10 llvm-10-runtime
-RUN rm -rf /var/lib/apt/lists/*
+libaio-dev \
+llvm-10 lldb-10 llvm-10-dev libllvm10 llvm-10-runtime \
+libgmp-dev libcgal-dev libboost-all-dev \
+libglu1-mesa-dev freeglut3-dev mesa-common-dev \
+qt5-default libqt5opengl5 libqt5opengl5-dev \
+libopengl0 \
+libeigen3-dev \
+&& rm -rf /var/lib/apt/lists/*
+
 ENV PYTHON_VERSION=3.8
 ENV CONDA_URL=https://repo.anaconda.com/miniconda/Miniconda3-py38_4.10.3-Linux-x86_64.sh
 RUN curl -fsSL -v -o ~/miniconda.sh -O ${CONDA_URL} && \
@@ -46,14 +52,16 @@ RUN make
 RUN make install
 WORKDIR /app
 RUN conda env create -f environment.yml
-SHELL ["conda", "run", "-n", "corticalflow", "/bin/bash", "-c"]
+SHELL ["conda", "run", "-n", "vox2cortex", "/bin/bash", "-c"]
 RUN pip install jcc==3.12
-RUN git clone https://github.com/neuroneural/corticalflow_fork.git
-WORKDIR /app/corticalflow_fork/docker/nighres
-RUN git checkout tags/docker1
+RUN git clone https://github.com/neuroneural/Vox2Cortex_fork.git
+WORKDIR /app/Vox2Cortex_fork/docker/nighres
 RUN ./build.sh
 RUN python3 -m pip install .
+RUN pip install https://github.com/cnr-isti-vclab/PyMeshLab/releases/download/v2021.07/pymeshlab-2021.7-cp37-cp37m-manylinux1_x86_64.whl
 RUN apt-get clean
+RUN rm -rf /var/lib/apt/lists/*
+RUN rm -rf /app
 RUN pip cache purge
 RUN conda clean -a
 ENTRYPOINT ["/bin/bash"]

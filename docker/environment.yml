@@ -1,4 +1,4 @@
-name: corticalflow
+name: vox2cortex
 channels:
   - pytorch3d
   - pytorch
@@ -111,4 +111,3 @@ dependencies:
     - typed-ast==1.5.4
     - werkzeug==2.1.2
     - zipp==3.8.1
-prefix: /data/users2/washbee/anaconda3/envs/corticalflow
