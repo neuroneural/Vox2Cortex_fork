@@ -24,6 +24,7 @@ curl \
 git \
 wget \
 cmake \
+openjdk-8-jdk \
 libaio-dev && \
 apt-get install -y --no-install-recommends llvm-10 lldb-10 llvm-10-dev libllvm10 llvm-10-runtime
 RUN rm -rf /var/lib/apt/lists/*
@@ -34,11 +35,25 @@ chmod +x ~/miniconda.sh && \
 ~/miniconda.sh -b -p /opt/miniconda3 
 
 WORKDIR /app
-RUN conda create -n v2c python=3.8
-SHELL ["conda", "run", "-n", "v2c", "/bin/bash", "-c"]
-RUN git clone https://github.com/neuroneural/Vox2Cortex_fork.git
-WORKDIR /app/Vox2Cortex_fork 
-RUN pip install -e .
-WORKDIR /app/Vox2Cortex_fork/docker/pytorch3d
-RUN pip install -e .
-
+COPY environment.yml .
+COPY CBSI.tar.gz .
+RUN tar -xf CBSI.tar.gz
+RUN mkdir niftyreg-build
+ENV CMAKE_BUILD_TYPE=Release
+WORKDIR /app/niftyreg-build
+RUN cmake ../niftyreg-CBSI
+RUN make
+RUN make install
+WORKDIR /app
+RUN conda env create -f environment.yml
+SHELL ["conda", "run", "-n", "corticalflow", "/bin/bash", "-c"]
+RUN pip install jcc==3.12
+RUN git clone https://github.com/neuroneural/corticalflow_fork.git
+WORKDIR /app/corticalflow_fork/docker/nighres
+RUN git checkout tags/docker1
+RUN ./build.sh
+RUN python3 -m pip install .
+RUN apt-get clean
+RUN pip cache purge
+RUN conda clean -a
+ENTRYPOINT ["/bin/bash"]
