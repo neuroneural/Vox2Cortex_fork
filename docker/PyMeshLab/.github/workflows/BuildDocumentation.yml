@@ -1,0 +1,84 @@
+name: BuildDocumentation
+
+on:
+  workflow_dispatch
+
+jobs:
+  unix_build_pymeshlab:
+    name: Build PyMeshLab
+    runs-on: ubuntu-18.04
+    strategy:
+      matrix:
+        pyversion: [3.8]
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        ref: 'main'
+        submodules: recursive
+    - name: Remove old files
+      run: |
+        if [[ -f pymeshlab/pmeshlab* ]]; then
+          rm pymeshlab/pmeshlab*
+          rm -r pymeshlab/lib
+        fi
+    - name: PyMeshLab version
+      id: version
+      run: |
+        echo  ::set-output name=pyml_version::"$(cat PYML_VERSION)"
+
+    - name: Install Qt
+      uses: jurplel/install-qt-action@v2
+    - name: Install Python ${{ matrix.pyversion }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.pyversion }}
+    - name: Install Ubuntu dependencies
+      run: |
+        sudo apt-get install -y mesa-common-dev libglu1-mesa-dev libgmp-dev libcgal-dev libboost-all-dev libxerces-c-dev
+        #needed by qt 5.15 on linux
+        sudo apt-get install libxcb-icccm4-dev libxcb-image0-dev libxcb-keysyms1-dev libxcb-render-util0-dev libxcb-xinerama0-dev
+    - name: Environment variables
+      id: envs
+      run: |
+        cd src/meshlab
+        echo  ::set-output name=meshlab_commit::$(git rev-parse --short HEAD)
+    - name: Cache MeshLab Build
+      id: cache-meshlab-build
+      uses: actions/cache@v2
+      with:
+        path: src/build/distrib/pymeshlab/lib/
+        key: ${{ runner.os }}-meshlab_build-${{steps.envs.outputs.meshlab_commit}}
+    # not building meshlab -- we need to hit always cache
+    - name: Fail if cache not hit
+      if: steps.cache-meshlab-build.outputs.cache-hit != 'true'
+      run: |
+        exit 1
+    - name: Build PyMeshLab ${{ matrix.pyversion }}
+      run: |
+        sh scripts/${{ runner.os }}/1_build.sh --no-build-meshlab
+    - name: Deploy PyMeshLab ${{ matrix.pyversion }}
+      run: |
+        sh scripts/${{ runner.os }}/2_deploy.sh
+    - name: Modify README.md
+      run: |
+        printf "# Do not use this branch\nThis branch is even with the 'main' branch, except for the PyMeshLab module that is needed to build the documentation.\n" > README.md
+    - name: Commit message
+      id: commit_message
+      run: |
+        echo  ::set-output name=message::"$(git log -1 --pretty=%B)"
+    - name: Commit files
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add --force pymeshlab/pmeshlab*
+        git add --force pymeshlab/lib/*
+        git add README.md
+        git commit -m "${{steps.commit_message.outputs.message}} and add libs" -a
+        git tag ${{steps.version.outputs.pyml_version}} HEAD
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        branch: docs
+        force: true
+        tags: true
+        github_token: ${{ secrets.GITHUB_TOKEN }}
