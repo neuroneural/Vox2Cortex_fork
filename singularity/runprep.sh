@@ -1,0 +1,2 @@
+singularity exec --bind $FREESURFER_HOME:/fshome/,/data/users2/washbee/Vox2Cortex_fork/:/v2c /data/users2/washbee/containers/v2c.sif /v2c/singularity/preprocess.sh
+

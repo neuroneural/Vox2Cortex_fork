@@ -59,6 +59,8 @@ WORKDIR /app/Vox2Cortex_fork/docker/nighres
 RUN ./build.sh
 RUN python3 -m pip install .
 RUN pip install https://github.com/cnr-isti-vclab/PyMeshLab/releases/download/v2021.07/pymeshlab-2021.7-cp37-cp37m-manylinux1_x86_64.whl
+RUN pip install nibabel
+RUN pip install trimesh
 RUN apt-get clean
 RUN rm -rf /var/lib/apt/lists/*
 RUN rm -rf /app
