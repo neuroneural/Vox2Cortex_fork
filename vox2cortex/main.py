@@ -195,15 +195,18 @@ def main(hps):
     hps = update_dict(hyper_ps_default, hps)
 
     # Automatically choose template
+    print('MODEL_CONFIG',type(hps['MODEL_CONFIG']))
     hps['MODEL_CONFIG']['MESH_TEMPLATE'] = os.path.join(
         hps['TEMPLATE_PATH'],
-        hps['TEMPLATE_NAME'](
-            hps['N_TEMPLATE_VERTICES'],
-            hps['SELECT_PATCH_SIZE'],
-            hps['PATCH_SIZE'])
+        hps['TEMPLATE_NAME']#(original author did not upload a template, so i changed a config item to a string pointing to the only template. 
+            #hps['N_TEMPLATE_VERTICES'],
+            #hps['SELECT_PATCH_SIZE'],
+            #hps['PATCH_SIZE'])
     )
 
     # Set dataset paths
+    print("dataset_paths", dataset_paths.keys())
+    
     update_dict(hps, dataset_paths[args.dataset])
 
     # Update again for overfitting

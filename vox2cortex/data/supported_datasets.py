@@ -19,9 +19,9 @@ class CortexDatasets(IntEnum):
 dataset_paths = {
     SupportedDatasets.DATASET_NAME.name: {
         # UPDATE HERE
-        'RAW_DATA_DIR': "/path/to/raw/data",
-        'PREPROCESSED_DATA_DIR': "/path/to/preprocessed/data",
-        'N_REF_POINTS_PER_STRUCTURE': "<min. number of verts in training set>",
+        'RAW_DATA_DIR': "/v2c/CSR_data",
+        'PREPROCESSED_DATA_DIR': "/v2c/CSR_data",
+        'N_REF_POINTS_PER_STRUCTURE': "40962",
         'FIXED_SPLIT': [
             "train_ids.txt",
             "val_ids.txt",

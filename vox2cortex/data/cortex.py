@@ -514,23 +514,24 @@ class Cortex(DatasetHandler):
                         "Should contain one file per split"
                 convert = lambda x: x[:-1] # 'x\n' --> 'x'
                 train_split = os.path.join(raw_data_dir, fixed_split[0])
+                print("train_split", train_split)
                 try:
                     files_train = list(map(convert, open(train_split, 'r').readlines()))
                 except:
                     files_train = []
-                    print("[Warning] No training files.")
+                    print("[Warning] No training files. cortex.py")
                 val_split = os.path.join(raw_data_dir, fixed_split[1])
                 try:
                     files_val = list(map(convert, open(val_split, 'r').readlines()))
                 except:
                     files_val = []
-                    print("[Warning] No validation files.")
+                    print("[Warning] No validation files. cortex.py")
                 test_split = os.path.join(raw_data_dir, fixed_split[2])
                 try:
                     files_test = list(map(convert, open(test_split, 'r').readlines()))
                 except:
                     files_test = []
-                    print("[Warning] No test files.")
+                    print("[Warning] No test files. cortex.py")
 
             else:
                 raise TypeError("Wrong type of parameter 'fixed_split'."
@@ -900,6 +901,7 @@ class Cortex(DatasetHandler):
                 voxel_verts, voxel_faces = transform_mesh_affine(
                     mesh.vertices, mesh.faces, world2vox_affine
                 )
+                print('n_min_vertices!!!!',voxel_verts.shape)
                 # Store min/max number of vertices
                 self.n_max_vertices = np.maximum(
                     voxel_verts.shape[0], self.n_max_vertices) if (
@@ -950,8 +952,8 @@ class Cortex(DatasetHandler):
             # Ignoring padded vertices is only possible if the
             # number of required vertices is smaller than the
             # minimum number of vertices in the dataset
-            ignore_padded=(self.n_ref_points_per_structure <
-                           self.n_min_vertices)
+            ignore_padded=(int(self.n_ref_points_per_structure) <
+                           int(self.n_min_vertices))
         )
         # Normals
         n = self.normal_labels[index][idx.unbind(1)].view(

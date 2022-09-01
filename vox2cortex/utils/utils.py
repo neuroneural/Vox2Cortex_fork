@@ -424,7 +424,7 @@ def choose_n_random_points(points: torch.Tensor, n: int, return_idx=False,
             ): n_padded += 1
             n_points = n_points - n_padded
         perm = torch.randperm(n_points)
-        perm = perm[:n].sort()[0]
+        perm = perm[:int(n)].sort()[0]
         if return_idx:
             return points[perm], perm
         return points[perm]

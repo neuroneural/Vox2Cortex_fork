@@ -30,15 +30,15 @@ ms = pymeshlab.MeshSet()
 
 ##### SET PATHs here: ######################################
 # FreeSurfer output directory
-OASIS_DIR = '/path/to/OASIS/FS_full/'
+OASIS_DIR = '/hcp-plis-subj'
 # Output directory
-SAVE_DIR = '/path/to/OASIS/CSR_data'
+SAVE_DIR = '/v2c/CSR_data'
 SURFACES = ['lh_pial', 'lh_white', 'rh_pial', 'rh_white']
-MNI_TEMPLATE_FILE = '/path/to/template/MNI152_T1_1mm.nii.gz'
+MNI_TEMPLATE_FILE = '/v2c/resources/MNI152_T1_1mm.nii.gz'
 
 ###########################################################
 
-with open('/path/to/OASIS/FS_full/sublist.txt') as f:
+with open('/v2c/sublist.txt') as f:
     SUBLIST = f.read().splitlines()
 
 if not os.path.exists(SAVE_DIR):

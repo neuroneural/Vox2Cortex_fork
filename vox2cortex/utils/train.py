@@ -265,7 +265,6 @@ class Solver():
         besides previous training is resumed.
         :param save_models: Save the final and best model.
         """
-
         best_val_score = None
         best_epoch = 0
         best_state = None
@@ -420,7 +419,10 @@ def create_exp_directory(experiment_base_dir, experiment_name):
         os.makedirs(log_dir, exist_ok=True)
     else:
         # Throw error if directory exists already
-        os.makedirs(log_dir)
+        try:
+            os.makedirs(log_dir)
+        except:
+            print('directory already exists')
 
     return experiment_name, experiment_dir, log_dir
 
@@ -438,7 +440,7 @@ def training_routine(hps: dict, experiment_name=None, loglevel='INFO',
     """
 
     ###### Prepare training experiment ######
-
+    print('A')
     experiment_base_dir = hps['EXPERIMENT_BASE_DIR']
 
     if not resume:
@@ -485,7 +487,7 @@ def training_routine(hps: dict, experiment_name=None, loglevel='INFO',
                  time_logging=hps['TIME_LOGGING'])
     trainLogger = logging.getLogger(ExecModes.TRAIN.name)
     trainLogger.info("Start training '%s'...", experiment_name)
-
+    print('B')
     ###### Load data ######
     trainLogger.info("Loading dataset %s...", hps['DATASET'])
     training_set, validation_set, _ = dataset_split_handler[hps['DATASET']](
@@ -496,15 +498,23 @@ def training_routine(hps: dict, experiment_name=None, loglevel='INFO',
 
     trainLogger.info("%d training files.", len(training_set))
     trainLogger.info("%d validation files.", len(validation_set))
-    trainLogger.info("Minimum number of vertices in training set: %d.",
+    #print(training_set.n_min_vertices, hps['N_REF_POINTS_PER_STRUCTURE'])
+    if not training_set.n_min_vertices == None:
+       trainLogger.info("Minimum number of vertices in training set: %d.",
                      training_set.n_min_vertices)
-    if training_set.n_min_vertices < hps['N_REF_POINTS_PER_STRUCTURE']:
+    else:
+       trainLogger.warning("Most likely you haven't configured training data correctly")
+       trainLogger.warning("error caught in train.py, exiting")
+       exit(1)
+    
+    print(type(training_set.n_min_vertices), type(hps['N_REF_POINTS_PER_STRUCTURE']))
+    if int(training_set.n_min_vertices) < int(hps['N_REF_POINTS_PER_STRUCTURE']):
         trainLogger.warning(
             "Padded vertices will not be ignored during sampling."
         )
 
     ###### Training ######
-
+    print('C')
     model = ModelHandler[hps['ARCHITECTURE']].value(\
                                         ndims=hps['NDIMS'],
                                         n_v_classes=hps['N_V_CLASSES'],

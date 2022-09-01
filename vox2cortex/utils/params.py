@@ -46,13 +46,15 @@ hyper_ps_default={
     # Therefore, it is recommended to use lists for parameters here.
 
     # The path where templates are stored
-    'TEMPLATE_PATH': "../supplementary_material/white_pial/",
+    'TEMPLATE_PATH': "../supplementary_material/templates/",
 
     # The template name in dependence of the number of vertices N,
     # 'SELECT_PATH_SIZE' (sps) and 'PATCH_SIZE' (ps)
-    'TEMPLATE_NAME': (
-        lambda N, sps, ps: f"cortex_4_1000_3_smoothed_{N}_sps{sps}_ps{ps}.obj"
-    ),
+    #'TEMPLATE_NAME': (
+    #    lambda N, sps, ps: f"cortex_4_1000_3_smoothed_{N}_sps{sps}_ps{ps}.obj"
+    #),
+    'TEMPLATE_NAME': "cortex_4_smoothed_42016_sps[192, 208, 192]_ps[128, 144, 128].obj",
+
 
     # The number of vertex classes to distinguish (including background)
     'N_V_CLASSES': 2,
@@ -286,12 +288,12 @@ hyper_ps_default={
     'FIXED_SPLIT': False,
 
     # The directory where experiments are stored
-    'EXPERIMENT_BASE_DIR': "../experiments/",
+    'EXPERIMENT_BASE_DIR': "/v2c/experiments/",
 
     # Directory of raw data
-    'RAW_DATA_DIR': "/raw/data/dir", # <<<< Needs to set (e.g. in main.py)
+    'RAW_DATA_DIR': "/v2c/CSR_DATA", # <<<< Needs to set (e.g. in main.py) #unsure
 
     # Directory of preprocessed data, e.g., containing thickness values from
     # FreeSurfer
-    'PREPROCESSED_DATA_DIR': "/preprocessed/data/dir", # <<<< Needs to set (e.g. in main.py)
+    'PREPROCESSED_DATA_DIR': "/v2c/CSR_DATA", # <<<< Needs to set (e.g. in main.py)
 }
