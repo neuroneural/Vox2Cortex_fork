@@ -50,11 +50,9 @@ hyper_ps_default={
 
     # The template name in dependence of the number of vertices N,
     # 'SELECT_PATH_SIZE' (sps) and 'PATCH_SIZE' (ps)
-    #'TEMPLATE_NAME': (
-    #    lambda N, sps, ps: f"cortex_4_1000_3_smoothed_{N}_sps{sps}_ps{ps}.obj"
-    #),
-    'TEMPLATE_NAME': "cortex_4_smoothed_42016_sps[192, 208, 192]_ps[128, 144, 128].obj",
-
+    'TEMPLATE_NAME': (
+        lambda N, sps, ps: f"cortex_4_smoothed_{N}_sps{sps}_ps{ps}.obj"
+    ),
 
     # The number of vertex classes to distinguish (including background)
     'N_V_CLASSES': 2,
