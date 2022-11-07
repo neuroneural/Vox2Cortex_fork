@@ -2,4 +2,6 @@
 . /opt/miniconda3/bin/activate vox2cortex
 cd /v2c/vox2cortex
 #. /fshome/SetUpFreeSurfer.sh
-python main.py --train --dataset=DATASET_NAME -n hcp --overfit 1
+#https://github.com/wandb/wandb/issues/592
+export WANDB_MODE=offline
+python main.py --train --dataset=DATASET_NAME -n hcp
