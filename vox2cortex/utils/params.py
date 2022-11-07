@@ -50,9 +50,7 @@ hyper_ps_default={
 
     # The template name in dependence of the number of vertices N,
     # 'SELECT_PATH_SIZE' (sps) and 'PATCH_SIZE' (ps)
-    'TEMPLATE_NAME': (
-        lambda N, sps, ps: f"cortex_4_smoothed_{N}_sps{sps}_ps{ps}.obj"
-    ),
+    'TEMPLATE_NAME': "cortex_4_smoothed_42016_sps[192, 208, 192]_ps[128, 144, 128].obj",
 
     # The number of vertex classes to distinguish (including background)
     'N_V_CLASSES': 2,
@@ -289,9 +287,9 @@ hyper_ps_default={
     'EXPERIMENT_BASE_DIR': "/v2c/experiments/",
 
     # Directory of raw data
-    'RAW_DATA_DIR': "/v2c/CSR_DATA", # <<<< Needs to set (e.g. in main.py) #unsure
+    'RAW_DATA_DIR': "/v2c/CSR_subset", # <<<< Needs to set (e.g. in main.py) #unsure
 
     # Directory of preprocessed data, e.g., containing thickness values from
     # FreeSurfer
-    'PREPROCESSED_DATA_DIR': "/v2c/CSR_DATA", # <<<< Needs to set (e.g. in main.py)
+    'PREPROCESSED_DATA_DIR': "/v2c/CSR_subset", # <<<< Needs to set (e.g. in main.py)
 }
