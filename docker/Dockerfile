@@ -31,21 +31,22 @@ chmod +x ~/miniconda.sh && \
 WORKDIR /app
 COPY environment.yml .
 COPY CBSI.tar.gz .
+COPY pytorch3d-0.4.0-cp37-cp37m-linux_x86_64.whl .
 RUN tar -xf CBSI.tar.gz
-#RUN mkdir niftyreg-build
-#ENV CMAKE_BUILD_TYPE=Release
-#WORKDIR /app/niftyreg-build
-#RUN cmake ../niftyreg-CBSI
-#RUN make
-#RUN make install
+RUN mkdir niftyreg-build
+ENV CMAKE_BUILD_TYPE=Release
+WORKDIR /app/niftyreg-build
+RUN cmake ../niftyreg-CBSI
+RUN make
+RUN make install
 WORKDIR /app
 RUN conda env create -f environment.yml
 SHELL ["conda", "run", "-n", "vox2cortex", "/bin/bash", "-c"]
-#RUN pip install jcc==3.12
-#RUN git clone https://github.com/neuroneural/Vox2Cortex_fork.git
-#WORKDIR /app/Vox2Cortex_fork/docker/nighres
-#RUN ./build.sh
-#RUN python3 -m pip install .
+RUN pip install jcc==3.12
+RUN git clone https://github.com/neuroneural/Vox2Cortex_fork.git
+WORKDIR /app/Vox2Cortex_fork/docker/nighres
+RUN ./build.sh
+RUN python3 -m pip install .
 RUN pip install https://github.com/cnr-isti-vclab/PyMeshLab/releases/download/v2021.07/pymeshlab-2021.7-cp37-cp37m-manylinux1_x86_64.whl
 WORKDIR /app
 RUN curl -LO https://github.com/NVIDIA/cub/archive/1.10.0.tar.gz
@@ -55,11 +56,9 @@ ENV CUDA_HOME=/usr/local/cuda
 RUN git clone https://github.com/fabibo3/pytorch3d.git
 WORKDIR /app/pytorch3d
 RUN git checkout tags/vox2cortex_cvpr2022 -b vox2cortex_pytorch3d
-RUN pip install -e . -v --log /app/piplog.log
+#RUN pip install -e . -v --log /app/piplog.log
 WORKDIR /app
-#COPY pytorch3d_4.0_nvcc.tar .
-#RUN rm -rf pytorch3d
-
+RUN pip install pytorch3d-0.4.0-cp37-cp37m-linux_x86_64.whl
 RUN apt-get clean
 RUN rm -rf /var/lib/apt/lists/*
 RUN pip cache purge
