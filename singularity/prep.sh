@@ -4,4 +4,5 @@ cd /v2c/vox2cortex
 . $FREESURFER_HOME/SetUpFreeSurfer.sh
 #https://github.com/wandb/wandb/issues/592
 export WANDB_MODE=offline
+#set data paths in python script
 python scripts/pre_process_oasis.py
