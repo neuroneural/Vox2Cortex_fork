@@ -1,0 +1,10 @@
+MODEL_CONFIG <class 'dict'>
+dataset_paths dict_keys(['DATASET_NAME'])
+A
+directory already exists
+B
+train_split /data/users2/washbee/speedrun/v2c-data/train_ids.txt
+[Warning] No training files. cortex.py
+[Warning] No validation files. cortex.py
+[Warning] No test files. cortex.py
+

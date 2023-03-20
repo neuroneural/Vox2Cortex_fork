@@ -1,0 +1,107 @@
+[INFO] Testing hcp...
+[INFO] Using template ../supplementary_material/templates/cortex_4_smoothed_42016_sps[192, 208, 192]_ps[128, 144, 128].obj
+/opt/miniconda3/envs/vox2cortex/lib/python3.7/site-packages/torch/cuda/memory.py:354: FutureWarning: torch.cuda.max_memory_cached has been renamed to torch.cuda.max_memory_reserved
+  FutureWarning)
+/opt/miniconda3/envs/vox2cortex/lib/python3.7/site-packages/torch/cuda/memory.py:346: FutureWarning: torch.cuda.memory_cached has been renamed to torch.cuda.memory_reserved
+  FutureWarning)
+[INFO] Loading dataset DATASET_NAME...
+Loading images...:   0%|          | 0/1 [00:00<?, ?it/s]Loading images...: 100%|██████████| 1/1 [00:00<00:00,  5.43it/s]Loading images...: 100%|██████████| 1/1 [00:00<00:00,  5.42it/s]
+Loading voxelized meshes...: 0it [00:00, ?it/s]Loading voxelized meshes...: 0it [00:00, ?it/s]
+Loading meshes...:   0%|          | 0/1 [00:00<?, ?it/s]Loading meshes...: 100%|██████████| 1/1 [00:00<00:00,  7.00it/s]Loading meshes...: 100%|██████████| 1/1 [00:00<00:00,  6.99it/s]
+Transform meshes accordingly...: 0it [00:00, ?it/s]Transform meshes accordingly...: 1it [00:00,  3.50it/s]Transform meshes accordingly...: 1it [00:00,  3.50it/s]
+Voxelize meshes...:   0%|          | 0/1 [00:00<?, ?it/s][INFO] Testing hcp...
+[INFO] Using template ../supplementary_material/templates/cortex_4_smoothed_42016_sps[192, 208, 192]_ps[128, 144, 128].obj
+/opt/miniconda3/envs/vox2cortex/lib/python3.7/site-packages/torch/cuda/memory.py:354: FutureWarning: torch.cuda.max_memory_cached has been renamed to torch.cuda.max_memory_reserved
+  FutureWarning)
+/opt/miniconda3/envs/vox2cortex/lib/python3.7/site-packages/torch/cuda/memory.py:346: FutureWarning: torch.cuda.memory_cached has been renamed to torch.cuda.memory_reserved
+  FutureWarning)
+[INFO] Loading dataset DATASET_NAME...
+Loading images...:   0%|          | 0/1 [00:00<?, ?it/s]Loading images...: 100%|██████████| 1/1 [00:00<00:00,  5.46it/s]Loading images...: 100%|██████████| 1/1 [00:00<00:00,  5.45it/s]
+Loading voxelized meshes...: 0it [00:00, ?it/s]Loading voxelized meshes...: 0it [00:00, ?it/s]Traceback (most recent call last):
+  File "main.py", line 20, in <module>
+    from utils.train import training_routine
+  File "/v2c/vox2cortex/utils/train.py", line 39, in <module>
+    from utils.evaluate import ModelEvaluator
+  File "/v2c/vox2cortex/utils/evaluate.py", line 33, in <module>
+    nvidia_smi.nvmlInit()
+  File "/opt/miniconda3/envs/vox2cortex/lib/python3.7/site-packages/pynvml.py", line 615, in nvmlInit
+    _nvmlCheckReturn(ret)
+  File "/opt/miniconda3/envs/vox2cortex/lib/python3.7/site-packages/pynvml.py", line 310, in _nvmlCheckReturn
+    raise NVMLError(ret)
+pynvml.NVMLError_LibRmVersionMismatch: RM has detected an NVML/RM version mismatch.
+0:00, ?it/s]Get point labels from meshes...: 1it [00:00,  1.25it/s]Get point labels from meshes...: 1it [00:00,  1.25it/s]
+[INFO] 1 test files.
+Traceback (most recent call last):
+  File "main.py", line 260, in <module>
+    main(hyper_ps)
+  File "main.py", line 256, in main
+    loglevel=hps['LOGLEVEL'], resume=args.resume)
+  File "/v2c/vox2cortex/utils/test.py", line 195, in test_routine
+    write_time2csv('v2c', (b-a).total_seconds())
+  File "/v2c/vox2cortex/utils/test.py", line 36, in write_time2csv
+    with open('/data/users2/washbee/speedrun/events.csv', 'a') as f_object:
+FileNotFoundError: [Errno 2] No such file or directory: '/data/users2/washbee/speedrun/events.csv'
+Voxelize meshes...: 100%|██████████| 1/1 [00:07<00:00,  7.21s/it]Voxelize meshes...: 100%|██████████| 1/1 [00:07<00:00,  7.21s/it]
+Get point labels from meshes...: 0it [00:00, ?it/s]Get point labels from meshes...: 1it [00:00,  1.24it/s]Get point labels from meshes...: 1it [00:00,  1.24it/s]
+[INFO] 1 test files.
+Traceback (most recent call last):
+  File "main.py", line 260, in <module>
+    main(hyper_ps)
+  File "main.py", line 256, in main
+    loglevel=hps['LOGLEVEL'], resume=args.resume)
+  File "/v2c/vox2cortex/utils/test.py", line 195, in test_routine
+    write_time2csv('v2c', (b-a).total_seconds())
+  File "/v2c/vox2cortex/utils/test.py", line 36, in write_time2csv
+    with open('/data/users2/washbee/speedrun/events.csv', 'a') as f_object:
+FileNotFoundError: [Errno 2] No such file or directory: '/data/users2/washbee/speedrun/events.csv'
+Voxelize meshes...: 100%|██████████| 1/1 [00:07<00:00,  7.19s/it]Voxelize meshes...: 100%|██████████| 1/1 [00:07<00:00,  7.21s/it]
+Get point labels from meshes...: 0it [00:00, ?it/s]Get point labels from meshes...: 1it [00:00,  1.23it/s]Get point labels from meshes...: 1it [00:00,  1.23it/s]
+[INFO] 1 test files.
+Traceback (most recent call last):
+  File "main.py", line 260, in <module>
+    main(hyper_ps)
+  File "main.py", line 256, in main
+    loglevel=hps['LOGLEVEL'], resume=args.resume)
+  File "/v2c/vox2cortex/utils/test.py", line 195, in test_routine
+    write_time2csv('v2c', (b-a).total_seconds())
+  File "/v2c/vox2cortex/utils/test.py", line 36, in write_time2csv
+    with open('/data/users2/washbee/speedrun/events.csv', 'a') as f_object:
+FileNotFoundError: [Errno 2] No such file or directory: '/data/users2/washbee/speedrun/events.csv'
+[INFO] Testing hcp...
+[INFO] Using template ../supplementary_material/templates/cortex_4_smoothed_42016_sps[192, 208, 192]_ps[128, 144, 128].obj
+/opt/miniconda3/envs/vox2cortex/lib/python3.7/site-packages/torch/cuda/memory.py:354: FutureWarning: torch.cuda.max_memory_cached has been renamed to torch.cuda.max_memory_reserved
+  FutureWarning)
+/opt/miniconda3/envs/vox2cortex/lib/python3.7/site-packages/torch/cuda/memory.py:346: FutureWarning: torch.cuda.memory_cached has been renamed to torch.cuda.memory_reserved
+  FutureWarning)
+[INFO] Loading dataset DATASET_NAME...
+Loading images...:   0%|          | 0/1 [00:00<?, ?it/s]Loading images...: 100%|██████████| 1/1 [00:00<00:00,  5.45it/s]Loading images...: 100%|██████████| 1/1 [00:00<00:00,  5.44it/s]
+Loading voxelized meshes...: 0it [00:00, ?it/s]Loading voxelized meshes...: 0it [00:00, ?it/s][INFO] Testing hcp...
+[INFO] Using template ../supplementary_material/templates/cortex_4_smoothed_42016_sps[192, 208, 192]_ps[128, 144, 128].obj
+/opt/miniconda3/envs/vox2cortex/lib/python3.7/site-packages/torch/cuda/memory.py:354: FutureWarning: torch.cuda.max_memory_cached has been renamed to torch.cuda.max_memory_reserved
+  FutureWarning)
+/opt/miniconda3/envs/vox2cortex/lib/python3.7/site-packages/torch/cuda/memory.py:346: FutureWarning: torch.cuVoxelize meshes...: 100%|██████████| 1/1 [00:07<00:00,  7.19s/it]Voxelize meshes...: 100%|██████████| 1/1 [00:07<00:00,  7.19s/it]
+Get point labels from meshes...: 0it [00:00, ?it/s]�██| 1/1 [00:00<00:00,  5.44it/s]Loading images...: 100%|██████████| 1/1 [00:00<00:00,  5.43it/s]
+Loading voxelized meshes...: 0it [00:00, ?it/s]Loading voxelized meshes...: 0it [00:00, ?it/s]
+Loading meshes...:   0%|          | 0/1 [00:00<?, ?it/s]Loading meshes...: 100%|██████████| 1/1 [00:00<00:00,  6.99it/s]Loading meshes...: 100%|██████████| 1/1 [00:00<00:00,  6.98it/s]
+Transform meshes accordingly...: 0it [00:00, ?it/s]Transform meshes accordingly...: 1it [00:00,  3.48it/s]Transform meshes accordingly...: 1it [00:00,  3.47it/s]
+Voxelize meshes...:   0%|          | 0/1 [00:00<?, ?it/s]Voxelize meshes...: 100%|██████████| 1/1 [00:07<00:00,  7.21s/it]Voxelize meshes...: 100%|██████████| 1/1 [00:07<00:00,  7.21s/it]
+Get point labels from meshes...: 0it [00:00, ?it/s]s)
+  File "main.py", line 256, in main
+    loglevel=hps['LOGLEVEL'], resume=args.resume)
+  File "/v2c/vox2cortex/utils/test.py", line 195, in test_routine
+    write_time2csv('v2c', (b-a).total_seconds())
+  File "/v2c/vox2cortex/utils/test.py", line 36, in write_time2csv
+    with open('/data/users2/washbee/speedrun/events.csv', 'a') as f_object:
+FileNotFoundError: [Errno 2] No such file or directory: '/data/users2/washbee/speedrun/events.csv'
+Get point labels from meshes...: 1it [00:00,  1.24it/s]Get point labels from meshes...: 1it [00:00,  1.23it/s]
+[INFO] 1 test files.
+Traceback (most recent call last):
+  File "main.py", line 260, in <module>
+    main(hyper_ps)
+  File "main.py", line 256, in main
+    loglevel=hps['LOGLEVEL'], resume=args.resume)
+  File "/v2c/vox2cortex/utils/test.py", line 195, in test_routine
+    write_time2csv('v2c', (b-a).total_seconds())
+  File "/v2c/vox2cortex/utils/test.py", line 36, in write_time2csv
+    with open('/data/users2/washbee/speedrun/events.csv', 'a') as f_object:
+FileNotFoundError: [Errno 2] No such file or directory: '/data/users2/washbee/speedrun/events.csv'

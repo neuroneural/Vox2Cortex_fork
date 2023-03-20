@@ -1,0 +1,2 @@
+MODEL_CONFIG <class 'dict'>
+dataset_paths dict_keys(['DATASET_NAME'])

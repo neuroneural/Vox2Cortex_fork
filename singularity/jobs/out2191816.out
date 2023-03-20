@@ -1,0 +1,4 @@
+MODEL_CONFIG <class 'dict'>
+dataset_paths dict_keys(['DATASET_NAME'])
+Device 0: b'NVIDIA GeForce RTX 2080 Ti', Memory : (97.80% free): 11811160064(total), 11550785536 (free), 260374528 (used)
+train_split /v2c/CSR_data/train_ids.txt

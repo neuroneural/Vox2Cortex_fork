@@ -1,0 +1,65 @@
+MODEL_CONFIG <class 'dict'>
+dataset_paths dict_keys(['DATASET_NAME'])
+train_split /v2c/CSR_data/train_ids.txt
+n_min_vertices!!!! (36415, 3)
+n_min_vertices!!!! (35796, 3)
+n_min_vertices!!!! (36415, 3)
+n_min_vertices!!!! (35796, 3)
+[Warning] File /v2c/CSR_data/201818/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/201818/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/201818/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/201818/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+
+
+
+
+
+model size: 25.010MB
+
+
+
+
+
+model name  best.model
+
+
+
+
+
+model size: 25.010MB
+
+
+
+
+
+0 - load test dataset
+Device 0: b'Tesla V100-SXM2-32GB', Memory : (99.20% free): 34359738368(total), 34085994496 (free), 273743872 (used)
+Max Memory occupied by tensors: 0
+Max Memory Cached: 0
+Current Memory occupied by tensors: 0
+Current Memory cached occupied by tensors: 0
+
+
+
+
+0 - Test Models
+Device 0: b'Tesla V100-SXM2-32GB', Memory : (99.20% free): 34359738368(total), 34085994496 (free), 273743872 (used)
+Max Memory occupied by tensors: 0
+Max Memory Cached: 0
+Current Memory occupied by tensors: 0
+Current Memory cached occupied by tensors: 0
+
+
+
+
+0 - Select Model
+Device 0: b'Tesla V100-SXM2-32GB', Memory : (96.01% free): 34359738368(total), 32990232576 (free), 1369505792 (used)
+Max Memory occupied by tensors: 10083840
+Max Memory Cached: 20971520
+Current Memory occupied by tensors: 10083840
+Current Memory cached occupied by tensors: 20971520
+
+
+
+
+total seconds for one batch is 0.802285

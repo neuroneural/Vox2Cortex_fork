@@ -1,0 +1,123 @@
+MODEL_CONFIG <class 'dict'>
+dataset_paths dict_keys(['DATASET_NAME'])
+train_split /v2c/CSR_data/train_ids.txt
+n_min_vertices!!!! (36415, 3)
+n_min_vertices!!!! (35796, 3)
+n_min_vertices!!!! (36415, 3)
+n_min_vertices!!!! (35796, 3)
+[Warning] File /v2c/CSR_data/201818/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/201818/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/201818/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/201818/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+loading data took {} seconds 8.640856
+
+
+
+
+
+model size: 25.010MB
+
+
+
+
+
+model name  best.model
+
+
+
+
+
+model size: 25.010MB
+
+
+
+
+
+0 - load test dataset
+Device 0: b'NVIDIA GeForce RTX 2080 Ti', Memory : (97.75% free): 11811160064(total), 11545673728 (free), 265486336 (used)
+Max Memory occupied by tensors: 0
+Max Memory Cached: 0
+Current Memory occupied by tensors: 0
+Current Memory cached occupied by tensors: 0
+
+
+
+
+0 - Test Models
+Device 0: b'NVIDIA GeForce RTX 2080 Ti', Memory : (97.75% free): 11811160064(total), 11545673728 (free), 265486336 (used)
+Max Memory occupied by tensors: 0
+Max Memory Cached: 0
+Current Memory occupied by tensors: 0
+Current Memory cached occupied by tensors: 0
+
+
+
+
+0 - Select Model
+Device 0: b'NVIDIA GeForce RTX 2080 Ti', Memory : (90.12% free): 11811160064(total), 10643898368 (free), 1167261696 (used)
+Max Memory occupied by tensors: 10083840
+Max Memory Cached: 20971520
+Current Memory occupied by tensors: 10083840
+Current Memory cached occupied by tensors: 20971520
+
+
+
+
+total seconds for one batch is 22.731801
+except
+final messages
+model name  intermediate.model
+
+
+
+
+
+model size: 25.010MB
+
+
+
+
+
+0 - load test dataset
+Device 0: b'NVIDIA GeForce RTX 2080 Ti', Memory : (97.75% free): 11811160064(total), 11545673728 (free), 265486336 (used)
+Max Memory occupied by tensors: 0
+Max Memory Cached: 0
+Current Memory occupied by tensors: 0
+Current Memory cached occupied by tensors: 0
+
+
+
+
+0 - Test Models
+Device 0: b'NVIDIA GeForce RTX 2080 Ti', Memory : (97.75% free): 11811160064(total), 11545673728 (free), 265486336 (used)
+Max Memory occupied by tensors: 0
+Max Memory Cached: 0
+Current Memory occupied by tensors: 0
+Current Memory cached occupied by tensors: 0
+
+
+
+
+0 - Select Model
+Device 0: b'NVIDIA GeForce RTX 2080 Ti', Memory : (90.12% free): 11811160064(total), 10643898368 (free), 1167261696 (used)
+Max Memory occupied by tensors: 10083840
+Max Memory Cached: 20971520
+Current Memory occupied by tensors: 10083840
+Current Memory cached occupied by tensors: 20971520
+
+
+
+
+0 - END best.model
+Device 0: b'NVIDIA GeForce RTX 2080 Ti', Memory : (58.49% free): 11811160064(total), 6908870656 (free), 4902289408 (used)
+Max Memory occupied by tensors: 2674882048
+Max Memory Cached: 3577741312
+Current Memory occupied by tensors: 36934656
+Current Memory cached occupied by tensors: 3577741312
+
+
+
+
+total seconds for one batch is 22.13581
+except
+final messages
