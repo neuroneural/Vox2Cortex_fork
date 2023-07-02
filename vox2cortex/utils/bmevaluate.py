@@ -34,7 +34,7 @@ from csv import writer
 
 def write_time2csv(model_name, t_sec):
     List = [model_name, t_sec]
-    with open('/data/users2/washbee/speedrun/events.csv', 'a') as f_object:
+    with open('/data/users2/washbee/speedrun/bm.events.csv', 'a') as f_object:
         writer_object = writer(f_object)
         writer_object.writerow(List)
         f_object.close() 
@@ -154,11 +154,7 @@ class ModelEvaluator():
                 )
             b = datetime.datetime.now()
             t_sec = (b-a).total_seconds()
-            List = ['v2c', t_sec]
-            with open('/data/users2/washbee/speedrun/Vox2Cortex_fork/singularity/jobs/events.csv', 'a') as f_object:
-                writer_object = writer(f_object)
-                writer_object.writerow(List)
-                f_object.close()
+            write_time2csv('Vox2Cortex', t_sec)
            
             print('total seconds for one batch is {}'.format(t_sec))
             #exit()

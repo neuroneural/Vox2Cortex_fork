@@ -20,6 +20,7 @@ from utils.utils import update_dict
 from utils.train import training_routine
 from utils.tune_params import tuning_routine
 from utils.test import test_routine
+from utils.benchmark import benchmark_routine
 from utils.train_test import train_test_routine
 from utils.ablation_study import (
     AVAILABLE_ABLATIONS,
@@ -39,7 +40,7 @@ hyper_ps = {
 
     # Learning
     'N_EPOCHS': 100,
-    'BATCH_SIZE': 2,
+    'BATCH_SIZE': 1,
     'EVAL_EVERY': 2,
 
     # Evaluation
@@ -67,7 +68,8 @@ mode_handler = {
     ExecModes.TRAIN.value: training_routine,
     ExecModes.TEST.value: test_routine,
     ExecModes.TRAIN_TEST.value: train_test_routine,
-    ExecModes.TUNE.value: tuning_routine
+    ExecModes.TUNE.value: tuning_routine,
+    ExecModes.BENCHMARK.value: benchmark_routine
 }
 
 def main(hps):
@@ -96,6 +98,13 @@ def main(hps):
                            help="Test a model, optionally specified by epoch."
                            " If no epoch is specified, the best (w.r.t. IoU)"
                            " and the last model are evaluated.")
+    argparser.add_argument('--benchmark',
+            type=int,
+            default=None,
+            nargs='?',
+            const=-1,
+            help="Test a model, optionally specified by epoch.  If no epoch is specified, the best (w.r.t. IoU) and the last model are evaluated.")
+
     argparser.add_argument('--tune',
                            default=None,
                            type=str,
@@ -178,6 +187,7 @@ def main(hps):
     hps['PARAMS_TO_TUNE'] = args.params_to_tune
     hps['PARAMS_TO_FINE_TUNE'] = args.params_to_fine_tune
     hps['TEST_MODEL_EPOCH'] = args.test
+    hps['BENCHMARK_MODEL_EPOCH'] = args.benchmark
     hps['N_TEMPLATE_VERTICES_TEST'] = args.n_test_vertices
     if args.ablation_study:
         hps['ABLATION_STUDY'] = args.ablation_study[0]
@@ -226,8 +236,10 @@ def main(hps):
             mode = ExecModes.TEST.value
         if args.train and args.test:
             mode = ExecModes.TRAIN_TEST.value
-        if not args.test and not args.train:
-            print("Please use either --train or --test or both.")
+        if args.benchmark:
+            mode = ExecModes.BENCHMARK.value
+        if not args.test and not args.train and not args.benchmark:
+            print("Please use either --train or --test or --benchmark or both.")
             return
 
     # Set params for ablation study

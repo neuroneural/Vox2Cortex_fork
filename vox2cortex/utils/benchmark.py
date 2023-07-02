@@ -13,7 +13,7 @@ import torch
 from utils.logging import init_logging, get_log_dir
 from utils.utils import string_dict, dict_to_lower_dict, update_dict
 from utils.modes import ExecModes
-from utils.evaluate import ModelEvaluator
+from utils.bmevaluate import ModelEvaluator
 from data.dataset_split_handler import dataset_split_handler
 from models.model_handler import ModelHandler
 from utils.params import DATASET_PARAMS, DATASET_SPLIT_PARAMS
@@ -33,7 +33,7 @@ from csv import writer
 
 def write_time2csv(model_name, t_sec):
     List = [model_name, t_sec]
-    with open('/data/users2/washbee/speedrun/events.csv', 'a') as f_object:
+    with open('/data/users2/washbee/speedrun/bm.loading.csv', 'a') as f_object:
         writer_object = writer(f_object)
         writer_object.writerow(List)
         f_object.close() 
@@ -102,7 +102,7 @@ def write_test_results(results: dict, model_name: str, experiment_dir: str):
     except:
         print("except")
 
-def test_routine(hps: dict, experiment_name, loglevel='INFO', resume=False):
+def benchmark_routine(hps: dict, experiment_name, loglevel='INFO', resume=False):#previously test_routine
     print('entering test_routine')
     """ A full testing routine for a trained model
 
@@ -192,7 +192,7 @@ def test_routine(hps: dict, experiment_name, loglevel='INFO', resume=False):
     )
     testLogger.info("%d test files.", len(test_set))
     b = datetime.datetime.now()
-    write_time2csv('v2c', (b-a).total_seconds())
+    write_time2csv('Vox2Cortex', (b-a).total_seconds()) 
     print('loading data took {} seconds'.format((b-a).total_seconds()))
     # Use current hps for testing. In particular, the evaluation metrics may be
     # different than during training.
@@ -230,8 +230,9 @@ def test_routine(hps: dict, experiment_name, loglevel='INFO', resume=False):
 
 
     # Select best and last model by default or model of a certain epoch
-    if hps['TEST_MODEL_EPOCH'] > 0:
+    if hps['TEST_MODEL_EPOCH'] is not None and hps['TEST_MODEL_EPOCH'] > 0:
         model_names = ["epoch_" + str(hps['TEST_MODEL_EPOCH']) + ".model"]
+    
     else:
         model_names = [fn for fn in os.listdir(experiment_dir) if (
             BEST_MODEL_NAME in fn or
@@ -255,7 +256,7 @@ def test_routine(hps: dict, experiment_name, loglevel='INFO', resume=False):
 
     for mn in model_names:
         model_path = os.path.join(experiment_dir, mn)
-        epoch = models_to_epochs.get(mn, int(hps['TEST_MODEL_EPOCH']))
+        epoch = models_to_epochs.get(mn, int(hps['BENCHMARK_MODEL_EPOCH']))
         print('model name',mn)
         # Test each epoch that has been stored
         if epoch not in epochs_tested or epoch == -1:
