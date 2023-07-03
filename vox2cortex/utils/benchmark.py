@@ -113,6 +113,8 @@ def benchmark_routine(hps: dict, experiment_name, loglevel='INFO', resume=False)
     :param resume: Only for compatibility with training but single test routine
     cannot be resumed.
     """
+    a = datetime.datetime.now()
+
     experiment_base_dir = hps['EXPERIMENT_BASE_DIR']
     if experiment_name is None:
         print("Please specify experiment name for testing with --exp_name.")
@@ -182,7 +184,7 @@ def benchmark_routine(hps: dict, experiment_name, loglevel='INFO', resume=False)
     GPU_msgs.append(stage + msgs + '\n\n\n')
     
     # Load test dataset
-    a = datetime.datetime.now()
+    #a = datetime.datetime.now()
     test_dataset_params = _get_test_dataset_params(hps, training_hps)
     testLogger.info("Loading dataset %s...", test_dataset_params['DATASET'])
     _, _, test_set = dataset_split_handler[test_dataset_params['DATASET']](
@@ -191,9 +193,9 @@ def benchmark_routine(hps: dict, experiment_name, loglevel='INFO', resume=False)
         **dict_to_lower_dict(test_dataset_params)
     )
     testLogger.info("%d test files.", len(test_set))
-    b = datetime.datetime.now()
-    write_time2csv('Vox2Cortex', (b-a).total_seconds()) 
-    print('loading data took {} seconds'.format((b-a).total_seconds()))
+    #b = datetime.datetime.now()
+    #write_time2csv('Vox2Cortex', (b-a).total_seconds()) 
+    #print('loading data took {} seconds'.format((b-a).total_seconds()))
     # Use current hps for testing. In particular, the evaluation metrics may be
     # different than during training.
     evaluator = ModelEvaluator(eval_dataset=test_set, save_dir=test_dir,
@@ -253,6 +255,7 @@ def benchmark_routine(hps: dict, experiment_name, loglevel='INFO', resume=False)
             models_to_epochs[mn] = -1 # -1 = unknown
 
     epochs_tested = []
+    
 
     for mn in model_names:
         model_path = os.path.join(experiment_dir, mn)
@@ -293,6 +296,10 @@ def benchmark_routine(hps: dict, experiment_name, loglevel='INFO', resume=False)
             #for msg in GPU_msgs:
             #    print(msg)
             
+
+            b = datetime.datetime.now()
+            write_time2csv('Vox2Cortex', (b-a).total_seconds())
+
             results = evaluator.evaluate(
                 model, epoch, save_meshes=len(test_set),
                 remove_previous_meshes=False,
