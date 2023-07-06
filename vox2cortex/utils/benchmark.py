@@ -31,12 +31,41 @@ deviceCount = nvidia_smi.nvmlDeviceGetCount()
 
 from csv import writer
 
-def write_time2csv(model_name, t_sec):
-    List = [model_name, t_sec]
-    with open('/data/users2/washbee/speedrun/bm.loading.csv', 'a') as f_object:
+import socket
+hostname = socket.gethostname()
+
+def write_time2csv(model_name, t_sec=None, subj=None, loading=False, memory=False, percentUsed=None, total=None, free=None, used=None):
+    base_path = '/data/users2/washbee/speedrun/'
+
+    # Consolidate filename determination
+    if loading:
+        filename = 'bm.loading'
+    else:
+        filename = 'bm.events'
+        
+    if memory:
+        filename += '.memory'
+
+    filename += '.csv'
+    filename = base_path + filename
+
+    # Define initial list
+    List = [model_name, t_sec, hostname, subj]
+    
+    # If memory flag is true, append memory related info
+    if memory:
+        List = [model_name, percentUsed, total, free, used, hostname, subj]
+
+    if not os.path.exists(filename):
+        # Create the file
+        with open(filename, 'w') as file:
+            # Perform any initial operations on the file, if needed
+            print("File created.")
+
+    with open(filename, 'a') as f_object:
         writer_object = writer(f_object)
         writer_object.writerow(List)
-        f_object.close() 
+
 
 # Helper Function
 def printModelSize(model):
@@ -52,23 +81,27 @@ def printModelSize(model):
     print('model size: {:.3f}MB'.format(size_all_mb))
     print('\n\n\n\n')
 
-def printSpaceUsage():
-    nvidia_smi.nvmlInit()
+
+def printSpaceUsage(info_flag = False):
     msgs = ""
     for i in range(deviceCount):
+        nvidia_smi.nvmlInit()
         handle = nvidia_smi.nvmlDeviceGetHandleByIndex(i)
         info = nvidia_smi.nvmlDeviceGetMemoryInfo(handle)
-        #print("Device {}: {}, Memory : ({:.2f}% free): {}(total), {} (free), {} (used)".format(i, nvidia_smi.nvmlDeviceGetName(handle), 100*info.free/info.total, info.total, info.free, info.used))
+        if info_flag:
+            return (100*info.free/info.total), info.total, info.free, info.used
+        
         msgs += '\n'
         msgs += "Device {}: {}, Memory : ({:.2f}% free): {}(total), {} (free), {} (used)".format(i, nvidia_smi.nvmlDeviceGetName(handle), 100*info.free/info.total, info.total, info.free, info.used)
-    nvidia_smi.nvmlShutdown()
+        nvidia_smi.nvmlShutdown()
+
     msgs+="\nMax Memory occupied by tensors: "+ str(torch.cuda.max_memory_allocated(device=None))
     msgs+="\nMax Memory Cached: "+ str(torch.cuda.max_memory_cached(device=None))
     msgs+="\nCurrent Memory occupied by tensors: "+ str(torch.cuda.memory_allocated(device=None))
     msgs+="\nCurrent Memory cached occupied by tensors: "+str(torch.cuda.memory_cached(device=None))
     msgs+="\n"
+    return str(msgs)
 
-    return msgs
 
 def _get_test_dataset_params(hps, training_hps):
     """ Get test split: All parameters equal to the training parameters but the
@@ -256,7 +289,7 @@ def benchmark_routine(hps: dict, experiment_name, loglevel='INFO', resume=False)
 
     epochs_tested = []
     
-
+    
     for mn in model_names:
         model_path = os.path.join(experiment_dir, mn)
         epoch = models_to_epochs.get(mn, int(hps['BENCHMARK_MODEL_EPOCH']))
@@ -296,16 +329,22 @@ def benchmark_routine(hps: dict, experiment_name, loglevel='INFO', resume=False)
             #for msg in GPU_msgs:
             #    print(msg)
             
-
             b = datetime.datetime.now()
-            write_time2csv('Vox2Cortex', (b-a).total_seconds())
+            write_time2csv('Vox2Cortex', t_sec = (b-a).total_seconds(), loading=True)
+            percentUsed,total,free,used = printSpaceUsage(info_flag=True)
+            write_time2csv('Vox2Cortex',percentUsed=percentUsed, total=total, free=free, used=used,loading=True,memory=True)
 
+            a = datetime.datetime.now()
             results = evaluator.evaluate(
                 model, epoch, save_meshes=len(test_set),
                 remove_previous_meshes=False,
                 store_in_orig_coords=True
             )
-
+            b = datetime.datetime.now()
+            write_time2csv('Vox2Cortex', t_sec = (b-a).total_seconds())
+            percentUsed,total,free,used = printSpaceUsage(info_flag=True)
+            write_time2csv('Vox2Cortex',memory=True, percentUsed=percentUsed,total=total,free=free,used=used)
+            
             #write_test_results(results, mn, test_dir)
 
             #epochs_tested.append(epoch)
@@ -317,4 +356,6 @@ def benchmark_routine(hps: dict, experiment_name, loglevel='INFO', resume=False)
             print('final messages')     
             for msg in GPU_msgs:
                 print(msg)
+            
+            
             exit()

@@ -32,13 +32,13 @@ import nvidia_smi
 
 from csv import writer
 
-def write_time2csv(model_name, t_sec):
+''' def write_time2csv(model_name, t_sec):
     List = [model_name, t_sec]
     with open('/data/users2/washbee/speedrun/bm.events.csv', 'a') as f_object:
         writer_object = writer(f_object)
         writer_object.writerow(List)
         f_object.close() 
-
+ '''
 nvidia_smi.nvmlInit()
 deviceCount = nvidia_smi.nvmlDeviceGetCount()
 def printSpaceUsage():
@@ -154,11 +154,11 @@ class ModelEvaluator():
                 )
             b = datetime.datetime.now()
             t_sec = (b-a).total_seconds()
-            write_time2csv('Vox2Cortex', t_sec)
+            #write_time2csv('Vox2Cortex', t_sec)
            
             print('total seconds for one batch is {}'.format(t_sec))
             #exit()
-            return ""
+            return ""#!!!!!!!!!!!!!!
 
         # Just consider means over evaluation set
         results = {k: np.mean(v) for k, v in results_all.items()}

@@ -18,6 +18,6 @@ sleep 5s
 source /usr/share/lmod/lmod/init/bash
 module use /application/ubuntumodules/localmodules
 module load singularity/3.10.2
-singularity exec --nv --bind /data,/data/users2/washbee/speedrun/Vox2Cortex_fork/:/v2c, /data/users2/washbee/containers/speedrun/v2c_sandbox_jul/ /v2c/singularity/benchmarks/benchmark.sh &
+singularity exec --nv --bind /data,/data/users2/washbee/speedrun/Vox2Cortex_fork/:/v2c, /data/users2/washbee/containers/speedrun/v2c_bm_sandbox/ /v2c/singularity/benchmarks/helloworld.sh &
 wait
 
