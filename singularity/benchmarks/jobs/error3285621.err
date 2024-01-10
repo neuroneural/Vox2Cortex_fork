@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "main.py", line 20, in <module>
+    from utils.train import training_routine
+  File "/v2c/vox2cortex/utils/train.py", line 39, in <module>
+    from utils.evaluate import ModelEvaluator
+  File "/v2c/vox2cortex/utils/evaluate.py", line 31, in <module>
+    import nvidia_smi
+ModuleNotFoundError: No module named 'nvidia_smi'

@@ -1,0 +1,992 @@
+MODEL_CONFIG <class 'dict'>
+dataset_paths dict_keys(['DATASET_NAME'])
+entering test_routine
+train_split /v2c/CSR_data/train_ids.txt
+n_min_vertices!!!! (38562, 3)
+n_min_vertices!!!! (38366, 3)
+n_min_vertices!!!! (38562, 3)
+n_min_vertices!!!! (38366, 3)
+n_min_vertices!!!! (42034, 3)
+n_min_vertices!!!! (42695, 3)
+n_min_vertices!!!! (42034, 3)
+n_min_vertices!!!! (42695, 3)
+n_min_vertices!!!! (49940, 3)
+n_min_vertices!!!! (49844, 3)
+n_min_vertices!!!! (49940, 3)
+n_min_vertices!!!! (49844, 3)
+n_min_vertices!!!! (40459, 3)
+n_min_vertices!!!! (41227, 3)
+n_min_vertices!!!! (40459, 3)
+n_min_vertices!!!! (41227, 3)
+n_min_vertices!!!! (40505, 3)
+n_min_vertices!!!! (40774, 3)
+n_min_vertices!!!! (40505, 3)
+n_min_vertices!!!! (40774, 3)
+n_min_vertices!!!! (42535, 3)
+n_min_vertices!!!! (43373, 3)
+n_min_vertices!!!! (42535, 3)
+n_min_vertices!!!! (43373, 3)
+n_min_vertices!!!! (42986, 3)
+n_min_vertices!!!! (42859, 3)
+n_min_vertices!!!! (42986, 3)
+n_min_vertices!!!! (42859, 3)
+n_min_vertices!!!! (38096, 3)
+n_min_vertices!!!! (39004, 3)
+n_min_vertices!!!! (38096, 3)
+n_min_vertices!!!! (39004, 3)
+n_min_vertices!!!! (43113, 3)
+n_min_vertices!!!! (43162, 3)
+n_min_vertices!!!! (43113, 3)
+n_min_vertices!!!! (43162, 3)
+n_min_vertices!!!! (45615, 3)
+n_min_vertices!!!! (46424, 3)
+n_min_vertices!!!! (45615, 3)
+n_min_vertices!!!! (46424, 3)
+n_min_vertices!!!! (36415, 3)
+n_min_vertices!!!! (35796, 3)
+n_min_vertices!!!! (36415, 3)
+n_min_vertices!!!! (35796, 3)
+n_min_vertices!!!! (43638, 3)
+n_min_vertices!!!! (43931, 3)
+n_min_vertices!!!! (43638, 3)
+n_min_vertices!!!! (43931, 3)
+n_min_vertices!!!! (42590, 3)
+n_min_vertices!!!! (42321, 3)
+n_min_vertices!!!! (42590, 3)
+n_min_vertices!!!! (42321, 3)
+n_min_vertices!!!! (39269, 3)
+n_min_vertices!!!! (39485, 3)
+n_min_vertices!!!! (39269, 3)
+n_min_vertices!!!! (39485, 3)
+n_min_vertices!!!! (37186, 3)
+n_min_vertices!!!! (38011, 3)
+n_min_vertices!!!! (37186, 3)
+n_min_vertices!!!! (38011, 3)
+n_min_vertices!!!! (44064, 3)
+n_min_vertices!!!! (44174, 3)
+n_min_vertices!!!! (44064, 3)
+n_min_vertices!!!! (44174, 3)
+n_min_vertices!!!! (42293, 3)
+n_min_vertices!!!! (42683, 3)
+n_min_vertices!!!! (42293, 3)
+n_min_vertices!!!! (42683, 3)
+n_min_vertices!!!! (45468, 3)
+n_min_vertices!!!! (46068, 3)
+n_min_vertices!!!! (45468, 3)
+n_min_vertices!!!! (46068, 3)
+n_min_vertices!!!! (34809, 3)
+n_min_vertices!!!! (35537, 3)
+n_min_vertices!!!! (34809, 3)
+n_min_vertices!!!! (35537, 3)
+n_min_vertices!!!! (36549, 3)
+n_min_vertices!!!! (36863, 3)
+n_min_vertices!!!! (36549, 3)
+n_min_vertices!!!! (36863, 3)
+n_min_vertices!!!! (43353, 3)
+n_min_vertices!!!! (43177, 3)
+n_min_vertices!!!! (43353, 3)
+n_min_vertices!!!! (43177, 3)
+n_min_vertices!!!! (45122, 3)
+n_min_vertices!!!! (45461, 3)
+n_min_vertices!!!! (45122, 3)
+n_min_vertices!!!! (45461, 3)
+n_min_vertices!!!! (37517, 3)
+n_min_vertices!!!! (37912, 3)
+n_min_vertices!!!! (37517, 3)
+n_min_vertices!!!! (37912, 3)
+n_min_vertices!!!! (33132, 3)
+n_min_vertices!!!! (32795, 3)
+n_min_vertices!!!! (33132, 3)
+n_min_vertices!!!! (32795, 3)
+n_min_vertices!!!! (42719, 3)
+n_min_vertices!!!! (43314, 3)
+n_min_vertices!!!! (42719, 3)
+n_min_vertices!!!! (43314, 3)
+n_min_vertices!!!! (44810, 3)
+n_min_vertices!!!! (45510, 3)
+n_min_vertices!!!! (44810, 3)
+n_min_vertices!!!! (45510, 3)
+n_min_vertices!!!! (48400, 3)
+n_min_vertices!!!! (48381, 3)
+n_min_vertices!!!! (48400, 3)
+n_min_vertices!!!! (48381, 3)
+n_min_vertices!!!! (39730, 3)
+n_min_vertices!!!! (39538, 3)
+n_min_vertices!!!! (39730, 3)
+n_min_vertices!!!! (39538, 3)
+n_min_vertices!!!! (47188, 3)
+n_min_vertices!!!! (47012, 3)
+n_min_vertices!!!! (47188, 3)
+n_min_vertices!!!! (47012, 3)
+n_min_vertices!!!! (35186, 3)
+n_min_vertices!!!! (35181, 3)
+n_min_vertices!!!! (35186, 3)
+n_min_vertices!!!! (35181, 3)
+n_min_vertices!!!! (42008, 3)
+n_min_vertices!!!! (41927, 3)
+n_min_vertices!!!! (42008, 3)
+n_min_vertices!!!! (41927, 3)
+n_min_vertices!!!! (38889, 3)
+n_min_vertices!!!! (39366, 3)
+n_min_vertices!!!! (38889, 3)
+n_min_vertices!!!! (39366, 3)
+n_min_vertices!!!! (50055, 3)
+n_min_vertices!!!! (50664, 3)
+n_min_vertices!!!! (50055, 3)
+n_min_vertices!!!! (50664, 3)
+n_min_vertices!!!! (32409, 3)
+n_min_vertices!!!! (32955, 3)
+n_min_vertices!!!! (32409, 3)
+n_min_vertices!!!! (32955, 3)
+n_min_vertices!!!! (38491, 3)
+n_min_vertices!!!! (38459, 3)
+n_min_vertices!!!! (38491, 3)
+n_min_vertices!!!! (38459, 3)
+n_min_vertices!!!! (41921, 3)
+n_min_vertices!!!! (42285, 3)
+n_min_vertices!!!! (41921, 3)
+n_min_vertices!!!! (42285, 3)
+n_min_vertices!!!! (35910, 3)
+n_min_vertices!!!! (36024, 3)
+n_min_vertices!!!! (35910, 3)
+n_min_vertices!!!! (36024, 3)
+n_min_vertices!!!! (36925, 3)
+n_min_vertices!!!! (36843, 3)
+n_min_vertices!!!! (36925, 3)
+n_min_vertices!!!! (36843, 3)
+n_min_vertices!!!! (42321, 3)
+n_min_vertices!!!! (42956, 3)
+n_min_vertices!!!! (42321, 3)
+n_min_vertices!!!! (42956, 3)
+n_min_vertices!!!! (44178, 3)
+n_min_vertices!!!! (44128, 3)
+n_min_vertices!!!! (44178, 3)
+n_min_vertices!!!! (44128, 3)
+n_min_vertices!!!! (35098, 3)
+n_min_vertices!!!! (34831, 3)
+n_min_vertices!!!! (35098, 3)
+n_min_vertices!!!! (34831, 3)
+n_min_vertices!!!! (42980, 3)
+n_min_vertices!!!! (42940, 3)
+n_min_vertices!!!! (42980, 3)
+n_min_vertices!!!! (42940, 3)
+n_min_vertices!!!! (42173, 3)
+n_min_vertices!!!! (42365, 3)
+n_min_vertices!!!! (42173, 3)
+n_min_vertices!!!! (42365, 3)
+n_min_vertices!!!! (48341, 3)
+n_min_vertices!!!! (48734, 3)
+n_min_vertices!!!! (48341, 3)
+n_min_vertices!!!! (48734, 3)
+n_min_vertices!!!! (34374, 3)
+n_min_vertices!!!! (34358, 3)
+n_min_vertices!!!! (34374, 3)
+n_min_vertices!!!! (34358, 3)
+n_min_vertices!!!! (40596, 3)
+n_min_vertices!!!! (40352, 3)
+n_min_vertices!!!! (40596, 3)
+n_min_vertices!!!! (40352, 3)
+n_min_vertices!!!! (48459, 3)
+n_min_vertices!!!! (48341, 3)
+n_min_vertices!!!! (48459, 3)
+n_min_vertices!!!! (48341, 3)
+n_min_vertices!!!! (40110, 3)
+n_min_vertices!!!! (39957, 3)
+n_min_vertices!!!! (40110, 3)
+n_min_vertices!!!! (39957, 3)
+n_min_vertices!!!! (44727, 3)
+n_min_vertices!!!! (45129, 3)
+n_min_vertices!!!! (44727, 3)
+n_min_vertices!!!! (45129, 3)
+n_min_vertices!!!! (39023, 3)
+n_min_vertices!!!! (39875, 3)
+n_min_vertices!!!! (39023, 3)
+n_min_vertices!!!! (39875, 3)
+n_min_vertices!!!! (38057, 3)
+n_min_vertices!!!! (38184, 3)
+n_min_vertices!!!! (38057, 3)
+n_min_vertices!!!! (38184, 3)
+n_min_vertices!!!! (37173, 3)
+n_min_vertices!!!! (37907, 3)
+n_min_vertices!!!! (37173, 3)
+n_min_vertices!!!! (37907, 3)
+n_min_vertices!!!! (40586, 3)
+n_min_vertices!!!! (40206, 3)
+n_min_vertices!!!! (40586, 3)
+n_min_vertices!!!! (40206, 3)
+n_min_vertices!!!! (43086, 3)
+n_min_vertices!!!! (43771, 3)
+n_min_vertices!!!! (43086, 3)
+n_min_vertices!!!! (43771, 3)
+n_min_vertices!!!! (43941, 3)
+n_min_vertices!!!! (44665, 3)
+n_min_vertices!!!! (43941, 3)
+n_min_vertices!!!! (44665, 3)
+n_min_vertices!!!! (36587, 3)
+n_min_vertices!!!! (36569, 3)
+n_min_vertices!!!! (36587, 3)
+n_min_vertices!!!! (36569, 3)
+n_min_vertices!!!! (37901, 3)
+n_min_vertices!!!! (37872, 3)
+n_min_vertices!!!! (37901, 3)
+n_min_vertices!!!! (37872, 3)
+n_min_vertices!!!! (51344, 3)
+n_min_vertices!!!! (52367, 3)
+n_min_vertices!!!! (51344, 3)
+n_min_vertices!!!! (52367, 3)
+n_min_vertices!!!! (42887, 3)
+n_min_vertices!!!! (43375, 3)
+n_min_vertices!!!! (42887, 3)
+n_min_vertices!!!! (43375, 3)
+n_min_vertices!!!! (42286, 3)
+n_min_vertices!!!! (42192, 3)
+n_min_vertices!!!! (42286, 3)
+n_min_vertices!!!! (42192, 3)
+n_min_vertices!!!! (41303, 3)
+n_min_vertices!!!! (41174, 3)
+n_min_vertices!!!! (41303, 3)
+n_min_vertices!!!! (41174, 3)
+n_min_vertices!!!! (40506, 3)
+n_min_vertices!!!! (41010, 3)
+n_min_vertices!!!! (40506, 3)
+n_min_vertices!!!! (41010, 3)
+n_min_vertices!!!! (38046, 3)
+n_min_vertices!!!! (38580, 3)
+n_min_vertices!!!! (38046, 3)
+n_min_vertices!!!! (38580, 3)
+n_min_vertices!!!! (43252, 3)
+n_min_vertices!!!! (43700, 3)
+n_min_vertices!!!! (43252, 3)
+n_min_vertices!!!! (43700, 3)
+n_min_vertices!!!! (38112, 3)
+n_min_vertices!!!! (38786, 3)
+n_min_vertices!!!! (38112, 3)
+n_min_vertices!!!! (38786, 3)
+n_min_vertices!!!! (36968, 3)
+n_min_vertices!!!! (37929, 3)
+n_min_vertices!!!! (36968, 3)
+n_min_vertices!!!! (37929, 3)
+n_min_vertices!!!! (58066, 3)
+n_min_vertices!!!! (59024, 3)
+n_min_vertices!!!! (58066, 3)
+n_min_vertices!!!! (59024, 3)
+n_min_vertices!!!! (34860, 3)
+n_min_vertices!!!! (35262, 3)
+n_min_vertices!!!! (34860, 3)
+n_min_vertices!!!! (35262, 3)
+n_min_vertices!!!! (41422, 3)
+n_min_vertices!!!! (41473, 3)
+n_min_vertices!!!! (41422, 3)
+n_min_vertices!!!! (41473, 3)
+n_min_vertices!!!! (36191, 3)
+n_min_vertices!!!! (36275, 3)
+n_min_vertices!!!! (36191, 3)
+n_min_vertices!!!! (36275, 3)
+n_min_vertices!!!! (38497, 3)
+n_min_vertices!!!! (38525, 3)
+n_min_vertices!!!! (38497, 3)
+n_min_vertices!!!! (38525, 3)
+n_min_vertices!!!! (45307, 3)
+n_min_vertices!!!! (45230, 3)
+n_min_vertices!!!! (45307, 3)
+n_min_vertices!!!! (45230, 3)
+n_min_vertices!!!! (40772, 3)
+n_min_vertices!!!! (40750, 3)
+n_min_vertices!!!! (40772, 3)
+n_min_vertices!!!! (40750, 3)
+n_min_vertices!!!! (37916, 3)
+n_min_vertices!!!! (38267, 3)
+n_min_vertices!!!! (37916, 3)
+n_min_vertices!!!! (38267, 3)
+n_min_vertices!!!! (42163, 3)
+n_min_vertices!!!! (42110, 3)
+n_min_vertices!!!! (42163, 3)
+n_min_vertices!!!! (42110, 3)
+n_min_vertices!!!! (37244, 3)
+n_min_vertices!!!! (37777, 3)
+n_min_vertices!!!! (37244, 3)
+n_min_vertices!!!! (37777, 3)
+n_min_vertices!!!! (37576, 3)
+n_min_vertices!!!! (37467, 3)
+n_min_vertices!!!! (37576, 3)
+n_min_vertices!!!! (37467, 3)
+n_min_vertices!!!! (43049, 3)
+n_min_vertices!!!! (43064, 3)
+n_min_vertices!!!! (43049, 3)
+n_min_vertices!!!! (43064, 3)
+n_min_vertices!!!! (38975, 3)
+n_min_vertices!!!! (39060, 3)
+n_min_vertices!!!! (38975, 3)
+n_min_vertices!!!! (39060, 3)
+n_min_vertices!!!! (36751, 3)
+n_min_vertices!!!! (37693, 3)
+n_min_vertices!!!! (36751, 3)
+n_min_vertices!!!! (37693, 3)
+n_min_vertices!!!! (37563, 3)
+n_min_vertices!!!! (38242, 3)
+n_min_vertices!!!! (37563, 3)
+n_min_vertices!!!! (38242, 3)
+n_min_vertices!!!! (46257, 3)
+n_min_vertices!!!! (47066, 3)
+n_min_vertices!!!! (46257, 3)
+n_min_vertices!!!! (47066, 3)
+n_min_vertices!!!! (36476, 3)
+n_min_vertices!!!! (36617, 3)
+n_min_vertices!!!! (36476, 3)
+n_min_vertices!!!! (36617, 3)
+n_min_vertices!!!! (39049, 3)
+n_min_vertices!!!! (39351, 3)
+n_min_vertices!!!! (39049, 3)
+n_min_vertices!!!! (39351, 3)
+n_min_vertices!!!! (41337, 3)
+n_min_vertices!!!! (42144, 3)
+n_min_vertices!!!! (41337, 3)
+n_min_vertices!!!! (42144, 3)
+n_min_vertices!!!! (43562, 3)
+n_min_vertices!!!! (43240, 3)
+n_min_vertices!!!! (43562, 3)
+n_min_vertices!!!! (43240, 3)
+n_min_vertices!!!! (43537, 3)
+n_min_vertices!!!! (43428, 3)
+n_min_vertices!!!! (43537, 3)
+n_min_vertices!!!! (43428, 3)
+n_min_vertices!!!! (48742, 3)
+n_min_vertices!!!! (49743, 3)
+n_min_vertices!!!! (48742, 3)
+n_min_vertices!!!! (49743, 3)
+n_min_vertices!!!! (41085, 3)
+n_min_vertices!!!! (41132, 3)
+n_min_vertices!!!! (41085, 3)
+n_min_vertices!!!! (41132, 3)
+n_min_vertices!!!! (53231, 3)
+n_min_vertices!!!! (53988, 3)
+n_min_vertices!!!! (53231, 3)
+n_min_vertices!!!! (53988, 3)
+n_min_vertices!!!! (38006, 3)
+n_min_vertices!!!! (38184, 3)
+n_min_vertices!!!! (38006, 3)
+n_min_vertices!!!! (38184, 3)
+n_min_vertices!!!! (37633, 3)
+n_min_vertices!!!! (37454, 3)
+n_min_vertices!!!! (37633, 3)
+n_min_vertices!!!! (37454, 3)
+n_min_vertices!!!! (41720, 3)
+n_min_vertices!!!! (41272, 3)
+n_min_vertices!!!! (41720, 3)
+n_min_vertices!!!! (41272, 3)
+n_min_vertices!!!! (42226, 3)
+n_min_vertices!!!! (42397, 3)
+n_min_vertices!!!! (42226, 3)
+n_min_vertices!!!! (42397, 3)
+n_min_vertices!!!! (41615, 3)
+n_min_vertices!!!! (42288, 3)
+n_min_vertices!!!! (41615, 3)
+n_min_vertices!!!! (42288, 3)
+n_min_vertices!!!! (38098, 3)
+n_min_vertices!!!! (38411, 3)
+n_min_vertices!!!! (38098, 3)
+n_min_vertices!!!! (38411, 3)
+n_min_vertices!!!! (44552, 3)
+n_min_vertices!!!! (44970, 3)
+n_min_vertices!!!! (44552, 3)
+n_min_vertices!!!! (44970, 3)
+n_min_vertices!!!! (44619, 3)
+n_min_vertices!!!! (44652, 3)
+n_min_vertices!!!! (44619, 3)
+n_min_vertices!!!! (44652, 3)
+n_min_vertices!!!! (44172, 3)
+n_min_vertices!!!! (43838, 3)
+n_min_vertices!!!! (44172, 3)
+n_min_vertices!!!! (43838, 3)
+n_min_vertices!!!! (33621, 3)
+n_min_vertices!!!! (33908, 3)
+n_min_vertices!!!! (33621, 3)
+n_min_vertices!!!! (33908, 3)
+n_min_vertices!!!! (44128, 3)
+n_min_vertices!!!! (44443, 3)
+n_min_vertices!!!! (44128, 3)
+n_min_vertices!!!! (44443, 3)
+n_min_vertices!!!! (34065, 3)
+n_min_vertices!!!! (34020, 3)
+n_min_vertices!!!! (34065, 3)
+n_min_vertices!!!! (34020, 3)
+n_min_vertices!!!! (38670, 3)
+n_min_vertices!!!! (38887, 3)
+n_min_vertices!!!! (38670, 3)
+n_min_vertices!!!! (38887, 3)
+n_min_vertices!!!! (33724, 3)
+n_min_vertices!!!! (33689, 3)
+n_min_vertices!!!! (33724, 3)
+n_min_vertices!!!! (33689, 3)
+n_min_vertices!!!! (46111, 3)
+n_min_vertices!!!! (46959, 3)
+n_min_vertices!!!! (46111, 3)
+n_min_vertices!!!! (46959, 3)
+n_min_vertices!!!! (42266, 3)
+n_min_vertices!!!! (43005, 3)
+n_min_vertices!!!! (42266, 3)
+n_min_vertices!!!! (43005, 3)
+n_min_vertices!!!! (45557, 3)
+n_min_vertices!!!! (44928, 3)
+n_min_vertices!!!! (45557, 3)
+n_min_vertices!!!! (44928, 3)
+[Warning] File /v2c/CSR_data/200008/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/200008/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/200008/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/200008/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/200109/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/200109/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/200109/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/200109/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/200210/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/200210/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/200210/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/200210/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/200311/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/200311/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/200311/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/200311/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/200614/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/200614/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/200614/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/200614/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/200917/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/200917/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/200917/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/200917/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/201111/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/201111/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/201111/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/201111/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/201414/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/201414/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/201414/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/201414/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/201515/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/201515/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/201515/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/201515/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/201717/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/201717/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/201717/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/201717/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/201818/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/201818/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/201818/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/201818/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/202113/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/202113/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/202113/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/202113/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/202719/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/202719/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/202719/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/202719/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/203418/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/203418/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/203418/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/203418/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/203721/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/203721/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/203721/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/203721/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/203923/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/203923/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/203923/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/203923/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/204016/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/204016/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/204016/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/204016/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/204319/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/204319/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/204319/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/204319/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/204420/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/204420/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/204420/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/204420/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/204521/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/204521/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/204521/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/204521/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/204622/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/204622/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/204622/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/204622/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/205119/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/205119/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/205119/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/205119/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/205220/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/205220/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/205220/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/205220/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/205725/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/205725/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/205725/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/205725/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/205826/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/205826/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/205826/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/205826/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/206222/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/206222/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/206222/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/206222/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/207123/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/207123/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/207123/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/207123/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/207426/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/207426/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/207426/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/207426/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/207628/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/207628/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/207628/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/207628/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/208024/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/208024/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/208024/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/208024/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/208125/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/208125/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/208125/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/208125/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/208226/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/208226/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/208226/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/208226/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/208327/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/208327/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/208327/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/208327/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/208428/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/208428/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/208428/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/208428/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/209127/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/209127/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/209127/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/209127/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/209228/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/209228/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/209228/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/209228/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/209329/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/209329/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/209329/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/209329/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/209834/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/209834/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/209834/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/209834/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/209935/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/209935/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/209935/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/209935/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/210011/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/210011/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/210011/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/210011/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/210415/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/210415/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/210415/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/210415/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/210617/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/210617/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/210617/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/210617/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/211114/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/211114/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/211114/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/211114/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/211215/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/211215/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/211215/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/211215/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/211316/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/211316/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/211316/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/211316/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/211417/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/211417/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/211417/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/211417/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/211720/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/211720/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/211720/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/211720/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/211922/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/211922/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/211922/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/211922/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/212015/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/212015/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/212015/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/212015/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/212116/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/212116/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/212116/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/212116/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/212217/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/212217/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/212217/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/212217/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/212318/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/212318/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/212318/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/212318/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/212419/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/212419/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/212419/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/212419/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/212823/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/212823/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/212823/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/212823/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/213421/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/213421/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/213421/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/213421/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/214019/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/214019/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/214019/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/214019/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/214221/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/214221/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/214221/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/214221/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/214423/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/214423/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/214423/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/214423/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/214524/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/214524/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/214524/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/214524/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/214625/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/214625/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/214625/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/214625/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/214726/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/214726/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/214726/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/214726/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/217126/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/217126/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/217126/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/217126/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/217429/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/217429/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/217429/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/217429/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/220721/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/220721/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/220721/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/220721/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/221218/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/221218/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/221218/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/221218/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/221319/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/221319/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/221319/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/221319/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/223929/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/223929/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/223929/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/223929/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/224022/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/224022/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/224022/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/224022/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/227432/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/227432/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/227432/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/227432/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/228434/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/228434/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/228434/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/228434/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/231928/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/231928/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/231928/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/231928/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/233326/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/233326/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/233326/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/233326/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/236130/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/236130/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/236130/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/236130/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/237334/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/237334/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/237334/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/237334/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/239944/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/239944/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/239944/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/239944/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/245333/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/245333/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/245333/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/245333/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/246133/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/246133/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/246133/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/246133/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/248339/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/248339/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/248339/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/248339/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/249947/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/249947/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/249947/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/249947/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/250427/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/250427/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/250427/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/250427/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/250932/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/250932/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/250932/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/250932/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/251833/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/251833/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/251833/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/251833/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/255639/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/255639/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/255639/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/255639/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/256540/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/256540/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/256540/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/256540/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/257542/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/257542/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/257542/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/257542/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/257845/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/257845/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/257845/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/257845/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/263436/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/263436/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/263436/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/263436/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/268749/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/268749/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/268749/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/268749/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/268850/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/268850/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/268850/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/268850/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/270332/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/270332/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/270332/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/270332/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/275645/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/275645/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/275645/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/275645/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/280739/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/280739/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/280739/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/280739/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/280941/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/280941/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/280941/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/280941/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/283543/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/283543/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/283543/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/283543/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/284646/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/284646/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/284646/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/284646/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/285345/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/285345/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/285345/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/285345/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/285446/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/285446/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/285446/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/285446/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/286650/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/286650/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/286650/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/286650/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/287248/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/287248/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/287248/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/287248/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/289555/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/289555/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/289555/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/289555/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/290136/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/290136/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/290136/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/290136/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/293748/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/293748/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/293748/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/293748/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/295146/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/295146/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/295146/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/295146/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/297655/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/297655/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/297655/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/297655/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/298051/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/298051/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/298051/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/298051/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/298455/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/298455/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/298455/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/298455/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/299154/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/299154/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/299154/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/299154/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+--------------empty cache----- before instantiating a model---------------
+
+Device 0: b'NVIDIA GeForce RTX 2080 Ti', Memory : (97.80% free): 11811160064(total), 11550785536 (free), 260374528 (used)
+Max Memory occupied by tensors: 0
+Max Memory Cached: 0
+Current Memory occupied by tensors: 0
+Current Memory cached occupied by tensors: 0
+
+--------------after instantiating a model---------------
+
+Device 0: b'NVIDIA GeForce RTX 2080 Ti', Memory : (90.16% free): 11811160064(total), 10649010176 (free), 1162149888 (used)
+Max Memory occupied by tensors: 10083840
+Max Memory Cached: 20971520
+Current Memory occupied by tensors: 10083840
+Current Memory cached occupied by tensors: 20971520
+
+
+
+
+
+
+model size: 25.010MB
+
+
+
+
+
+model name best.model
+------empty cache------before loading model------0 - load model weights +
+
+Device 0: b'NVIDIA GeForce RTX 2080 Ti', Memory : (90.16% free): 11811160064(total), 10649010176 (free), 1162149888 (used)
+Max Memory occupied by tensors: 10083840
+Max Memory Cached: 20971520
+Current Memory occupied by tensors: 10083840
+Current Memory cached occupied by tensors: 20971520
+
+------after loading model----------
+
+Device 0: b'NVIDIA GeForce RTX 2080 Ti', Memory : (89.91% free): 11811160064(total), 10619650048 (free), 1191510016 (used)
+Max Memory occupied by tensors: 36934656
+Max Memory Cached: 50331648
+Current Memory occupied by tensors: 36934656
+Current Memory cached occupied by tensors: 50331648
+
+model name  best.model
+
+
+
+
+
+model size: 25.010MB
+
+
+
+
+
+0 - write if debug
+
+Device 0: b'NVIDIA GeForce RTX 2080 Ti', Memory : (89.91% free): 11811160064(total), 10619650048 (free), 1191510016 (used)
+Max Memory occupied by tensors: 36934656
+Max Memory Cached: 50331648
+Current Memory occupied by tensors: 36934656
+Current Memory cached occupied by tensors: 50331648
+
+0 - model prediction
+
+Device 0: b'NVIDIA GeForce RTX 2080 Ti', Memory : (89.91% free): 11811160064(total), 10619650048 (free), 1191510016 (used)
+Max Memory occupied by tensors: 36934656
+Max Memory Cached: 50331648
+Current Memory occupied by tensors: 36934656
+Current Memory cached occupied by tensors: 50331648
+
+0 - after model prediction/ save (evaluator.evaluate)
+
+Device 0: b'NVIDIA GeForce RTX 2080 Ti', Memory : (58.59% free): 11811160064(total), 6920273920 (free), 4890886144 (used)
+Max Memory occupied by tensors: 2674882048
+Max Memory Cached: 3571449856
+Current Memory occupied by tensors: 504991232
+Current Memory cached occupied by tensors: 3571449856
+
+total seconds for one batch is 3.239314
+final messages
+0 - load test dataset
+Device 0: b'NVIDIA GeForce RTX 2080 Ti', Memory : (97.80% free): 11811160064(total), 11550785536 (free), 260374528 (used)
+Max Memory occupied by tensors: 0
+Max Memory Cached: 0
+Current Memory occupied by tensors: 0
+Current Memory cached occupied by tensors: 0
+
+
+
+
+0 - Test Models
+Device 0: b'NVIDIA GeForce RTX 2080 Ti', Memory : (97.80% free): 11811160064(total), 11550785536 (free), 260374528 (used)
+Max Memory occupied by tensors: 0
+Max Memory Cached: 0
+Current Memory occupied by tensors: 0
+Current Memory cached occupied by tensors: 0
+
+
+
+
+0 - Select Model
+Device 0: b'NVIDIA GeForce RTX 2080 Ti', Memory : (90.16% free): 11811160064(total), 10649010176 (free), 1162149888 (used)
+Max Memory occupied by tensors: 10083840
+Max Memory Cached: 20971520
+Current Memory occupied by tensors: 10083840
+Current Memory cached occupied by tensors: 20971520
+
+
+
+
+0 - evaluator.evaluate 
+Device 0: b'NVIDIA GeForce RTX 2080 Ti', Memory : (89.91% free): 11811160064(total), 10619650048 (free), 1191510016 (used)
+Max Memory occupied by tensors: 36934656
+Max Memory Cached: 50331648
+Current Memory occupied by tensors: 36934656
+Current Memory cached occupied by tensors: 50331648
+
+
+
+
+0 - END best.model
+Device 0: b'NVIDIA GeForce RTX 2080 Ti', Memory : (58.57% free): 11811160064(total), 6918176768 (free), 4892983296 (used)
+Max Memory occupied by tensors: 2674882048
+Max Memory Cached: 3573547008
+Current Memory occupied by tensors: 36934656
+Current Memory cached occupied by tensors: 3573547008
+
+
+
+

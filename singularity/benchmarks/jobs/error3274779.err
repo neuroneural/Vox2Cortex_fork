@@ -1,0 +1,9 @@
+usage: main.py [-h] [--architecture ARCHITECTURE] [--dataset DATASET]
+               [--train] [--test [TEST]]
+               [--tune PARAMS_TO_TUNE [PARAMS_TO_TUNE ...]]
+               [--fine-tune PARAMS_TO_FINE_TUNE [PARAMS_TO_FINE_TUNE ...]]
+               [--resume] [--log LOGLEVEL] [--proj PROJ_NAME]
+               [--group GROUP_NAME] [--device DEVICE] [--overfit [OVERFIT]]
+               [--time] [--n_test_vertices N_TEST_VERTICES]
+               [--ablation_study ABLATION_STUDY] [-n EXP_NAME]
+main.py: error: unrecognized arguments: --benchmark

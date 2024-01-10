@@ -2,8 +2,8 @@
 #SBATCH -n 1
 #SBATCH -c 4
 #SBATCH --mem=40g
-#SBATCH -p qTRDGPU
-#SBATCH --gres=gpu:RTX:1
+#SBATCH -p qTRDGPUH
+#SBATCH --gres=gpu:V100:1
 #SBATCH -t 1-00:00
 #SBATCH -J v2ctest
 #SBATCH -e jobs/error%A.err
@@ -12,7 +12,6 @@
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=washbee1@student.gsu.edu
 #SBATCH --oversubscribe
-#SBATCH --exclude=arctrdgn002,arctrddgx001
 
 sleep 5s
 source /usr/share/lmod/lmod/init/bash
