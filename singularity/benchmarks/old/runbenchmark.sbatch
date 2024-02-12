@@ -12,7 +12,6 @@
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=washbee1@student.gsu.edu
 #SBATCH --oversubscribe
-#SBATCH --exclude=arctrdgn002,arctrddgx001
 
 sleep 5s
 source /usr/share/lmod/lmod/init/bash

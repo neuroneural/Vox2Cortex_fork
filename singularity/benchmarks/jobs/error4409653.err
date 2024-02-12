@@ -1,0 +1,11 @@
+[INFO] Testing hcp...
+[INFO] Using template ../supplementary_material/templates/cortex_4_smoothed_42016_sps[192, 208, 192]_ps[128, 144, 128].obj
+[INFO] Loading dataset DATASET_NAME...
+Loading images...:   0%|          | 0/1 [00:00<?, ?it/s]Loading images...: 100%|██████████| 1/1 [00:00<00:00,  4.30it/s]Loading images...: 100%|██████████| 1/1 [00:00<00:00,  4.29it/s]
+Loading voxelized meshes...: 0it [00:00, ?it/s]Loading voxelized meshes...: 0it [00:00, ?it/s]
+Loading meshes...:   0%|          | 0/1 [00:00<?, ?it/s]Loading meshes...: 100%|██████████| 1/1 [00:00<00:00,  4.23it/s]Loading meshes...: 100%|██████████| 1/1 [00:00<00:00,  4.22it/s]
+Transform meshes accordingly...: 0it [00:00, ?it/s]Transform meshes accordingly...: 1it [00:00,  3.10it/s]Transform meshes accordingly...: 1it [00:00,  3.09it/s]
+Voxelize meshes...:   0%|          | 0/1 [00:00<?, ?it/s]Voxelize meshes...: 100%|██████████| 1/1 [00:07<00:00,  7.50s/it]Voxelize meshes...: 100%|██████████| 1/1 [00:07<00:00,  7.51s/it]
+Get point labels from meshes...: 0it [00:00, ?it/s]Get point labels from meshes...: 1it [00:00,  1.14it/s]Get point labels from meshes...: 1it [00:00,  1.14it/s]
+[INFO] 1 test files.
+Evaluate...:   0%|          | 0/1 [00:00<?, ?it/s]Evaluate...: 100%|██████████| 1/1 [00:04<00:00,  4.44s/it]Evaluate...: 100%|██████████| 1/1 [00:04<00:00,  4.44s/it]

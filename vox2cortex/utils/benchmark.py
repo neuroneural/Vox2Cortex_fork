@@ -22,86 +22,6 @@ from utils.model_names import (
     BEST_MODEL_NAME,
     FINAL_MODEL_NAME
 )
-import time
-import nvidia_smi
-import datetime
-
-nvidia_smi.nvmlInit()
-deviceCount = nvidia_smi.nvmlDeviceGetCount()
-
-from csv import writer
-
-import socket
-hostname = socket.gethostname()
-
-def write_time2csv(model_name, t_sec=None, subj=None, loading=False, memory=False, percentUsed=None, total=None, free=None, used=None):
-    base_path = '/data/users2/washbee/speedrun/'
-
-    # Consolidate filename determination
-    if loading:
-        filename = 'bm.loading'
-    else:
-        filename = 'bm.events'
-        
-    if memory:
-        filename += '.memory'
-
-    filename += '.csv'
-    filename = base_path + filename
-
-    # Define initial list
-    List = [model_name, t_sec, hostname, subj]
-    
-    # If memory flag is true, append memory related info
-    if memory:
-        List = [model_name, percentUsed, total, free, used, hostname, subj]
-
-    if not os.path.exists(filename):
-        # Create the file
-        with open(filename, 'w') as file:
-            # Perform any initial operations on the file, if needed
-            print("File created.")
-
-    with open(filename, 'a') as f_object:
-        writer_object = writer(f_object)
-        writer_object.writerow(List)
-
-
-# Helper Function
-def printModelSize(model):
-    # print(dir(model))
-    param_size = 0
-    for param in model.parameters():
-        param_size += param.nelement() * param.element_size()
-    buffer_size = 0
-    for buffer in model.buffers():
-        buffer_size += buffer.nelement() * buffer.element_size()
-    size_all_mb = (param_size + buffer_size) / 1024**2
-    print('\n\n\n\n')
-    print('model size: {:.3f}MB'.format(size_all_mb))
-    print('\n\n\n\n')
-
-
-def printSpaceUsage(info_flag = False):
-    msgs = ""
-    for i in range(deviceCount):
-        nvidia_smi.nvmlInit()
-        handle = nvidia_smi.nvmlDeviceGetHandleByIndex(i)
-        info = nvidia_smi.nvmlDeviceGetMemoryInfo(handle)
-        if info_flag:
-            return (100*info.free/info.total), info.total, info.free, info.used
-        
-        msgs += '\n'
-        msgs += "Device {}: {}, Memory : ({:.2f}% free): {}(total), {} (free), {} (used)".format(i, nvidia_smi.nvmlDeviceGetName(handle), 100*info.free/info.total, info.total, info.free, info.used)
-        nvidia_smi.nvmlShutdown()
-
-    msgs+="\nMax Memory occupied by tensors: "+ str(torch.cuda.max_memory_allocated(device=None))
-    msgs+="\nMax Memory Cached: "+ str(torch.cuda.max_memory_cached(device=None))
-    msgs+="\nCurrent Memory occupied by tensors: "+ str(torch.cuda.memory_allocated(device=None))
-    msgs+="\nCurrent Memory cached occupied by tensors: "+str(torch.cuda.memory_cached(device=None))
-    msgs+="\n"
-    return str(msgs)
-
 
 def _get_test_dataset_params(hps, training_hps):
     """ Get test split: All parameters equal to the training parameters but the
@@ -121,22 +41,18 @@ def _get_test_dataset_params(hps, training_hps):
     return test_dataset_params
 
 def write_test_results(results: dict, model_name: str, experiment_dir: str):
-    try:
-        res_file = os.path.join(experiment_dir, "test_results.txt")
-        with open(res_file, 'a') as f:
-            f.write(f"Results of {model_name}:\n")
-            for k, v in results.items():
-                f.write(f"{k}: {v}\n")
-    
-            f.write("\n\n")
+    res_file = os.path.join(experiment_dir, "test_results.txt")
+    with open(res_file, 'a') as f:
+        f.write(f"Results of {model_name}:\n")
+        for k, v in results.items():
+            f.write(f"{k}: {v}\n")
 
-        logging.getLogger(ExecModes.TEST.name).info("Test result written to %s",
+        f.write("\n\n")
+
+    logging.getLogger(ExecModes.TEST.name).info("Test result written to %s",
                                                 res_file)
-    except:
-        print("except")
 
-def benchmark_routine(hps: dict, experiment_name, loglevel='INFO', resume=False):#previously test_routine
-    print('entering test_routine')
+def benchmark_routine(hps: dict, experiment_name, loglevel='INFO', resume=False):
     """ A full testing routine for a trained model
 
     :param dict hps: Hyperparameters to use.
@@ -146,8 +62,6 @@ def benchmark_routine(hps: dict, experiment_name, loglevel='INFO', resume=False)
     :param resume: Only for compatibility with training but single test routine
     cannot be resumed.
     """
-    a = datetime.datetime.now()
-
     experiment_base_dir = hps['EXPERIMENT_BASE_DIR']
     if experiment_name is None:
         print("Please specify experiment name for testing with --exp_name.")
@@ -208,16 +122,8 @@ def benchmark_routine(hps: dict, experiment_name, loglevel='INFO', resume=False)
             raise RuntimeError(f"Hyperparameter {k.upper()} is not equal to the"\
                                " model that should be tested. Values are "\
                                f" {v_train} and {v}.")
-    # log for GPU utilization
-    GPU_msgs = []
 
-    ### Set Stage
-    stage = '0 - load test dataset'
-    msgs = printSpaceUsage()
-    GPU_msgs.append(stage + msgs + '\n\n\n')
-    
     # Load test dataset
-    #a = datetime.datetime.now()
     test_dataset_params = _get_test_dataset_params(hps, training_hps)
     testLogger.info("Loading dataset %s...", test_dataset_params['DATASET'])
     _, _, test_set = dataset_split_handler[test_dataset_params['DATASET']](
@@ -226,25 +132,13 @@ def benchmark_routine(hps: dict, experiment_name, loglevel='INFO', resume=False)
         **dict_to_lower_dict(test_dataset_params)
     )
     testLogger.info("%d test files.", len(test_set))
-    #b = datetime.datetime.now()
-    #write_time2csv('Vox2Cortex', (b-a).total_seconds()) 
-    #print('loading data took {} seconds'.format((b-a).total_seconds()))
+
     # Use current hps for testing. In particular, the evaluation metrics may be
     # different than during training.
     evaluator = ModelEvaluator(eval_dataset=test_set, save_dir=test_dir,
                                **hps_lower)
-    ### Set Stage
-    stage = '0 - Test Models'
-    msgs = printSpaceUsage()
-    GPU_msgs.append(stage + msgs + '\n\n\n')
-
 
     # Test models
-    
-    torch.cuda.empty_cache();
-    print('--------------empty cache----- before instantiating a model---------------')
-    msgs = printSpaceUsage()
-    print(msgs)
     model = ModelHandler[training_hps['ARCHITECTURE']].value(
         ndims=training_hps['NDIMS'],
         n_v_classes=training_hps['N_V_CLASSES'],
@@ -252,29 +146,15 @@ def benchmark_routine(hps: dict, experiment_name, loglevel='INFO', resume=False)
         patch_shape=training_hps['PATCH_SIZE'],
         **model_config
     ).float()
-    print('--------------after instantiating a model---------------')
-    msgs = printSpaceUsage()
-    print(msgs)
-    printModelSize(model)
-   
-
-    ### Set Stage
-    stage = '0 - Select Model'
-    msgs = printSpaceUsage()
-    GPU_msgs.append(stage + msgs + '\n\n\n')
-
 
     # Select best and last model by default or model of a certain epoch
-    if hps['TEST_MODEL_EPOCH'] is not None and hps['TEST_MODEL_EPOCH'] > 0:
-        model_names = ["epoch_" + str(hps['TEST_MODEL_EPOCH']) + ".model"]
-    
-    else:
-        model_names = [fn for fn in os.listdir(experiment_dir) if (
-            BEST_MODEL_NAME in fn or
-            INTERMEDIATE_MODEL_NAME in fn or
-            FINAL_MODEL_NAME in fn
-            )
-        ]
+    model_names = [fn for fn in os.listdir(experiment_dir) if (
+        BEST_MODEL_NAME in fn or
+        INTERMEDIATE_MODEL_NAME in fn or
+        FINAL_MODEL_NAME in fn
+        )
+    ]
+    model_names = [model_names[0]]#only do 1
 
     epochs_file = os.path.join(experiment_dir, "models_to_epochs.json")
     try:
@@ -288,74 +168,24 @@ def benchmark_routine(hps: dict, experiment_name, loglevel='INFO', resume=False)
             models_to_epochs[mn] = -1 # -1 = unknown
 
     epochs_tested = []
-    
-    
+
     for mn in model_names:
         model_path = os.path.join(experiment_dir, mn)
-        epoch = models_to_epochs.get(mn, int(hps['BENCHMARK_MODEL_EPOCH']))
-        print('model name',mn)
+        
         # Test each epoch that has been stored
-        if epoch not in epochs_tested or epoch == -1:
-            testLogger.info("Test model %s stored in training epoch %d",
-                            model_path, epoch)
+        # Avoid problem of cuda out of memory by first loading to cpu, see
+        # https://discuss.pytorch.org/t/cuda-error-out-of-memory-when-load-models/38011/3
+        model.load_state_dict(torch.load(model_path, map_location='cpu'))
+        model.cuda()
+        model.eval()
 
-            # Avoid problem of cuda out of memory by first loading to cpu, see
-            # https://discuss.pytorch.org/t/cuda-error-out-of-memory-when-load-models/38011/3
-            ### Set Stage
-            stage = '------empty cache------before loading model------0 - load model weights +'
-            torch.cuda.empty_cache();
-            msgs = printSpaceUsage()
-            print(stage)
-            print(msgs)
-            #GPU_msgs.append(stage + msgs + '\n\n\n')
-             
-            model.load_state_dict(torch.load(model_path, map_location='cpu'))
-            model.cuda()
-            model.eval()
-            
-            msgs = printSpaceUsage()
-            print('------after loading model----------')
-            print(msgs)
+        results = evaluator.evaluate(
+            model, -1, save_meshes=len(test_set),
+            remove_previous_meshes=False,
+            store_in_orig_coords=True
+        )
+        break
 
-            print('model name ' , mn)
-            printModelSize(model)
-            # print
+        # write_test_results(results, mn, test_dir)
 
-            ### Set Stage
-            stage = '0 - evaluator.evaluate '
-            msgs = printSpaceUsage()
-            GPU_msgs.append(stage + msgs + '\n\n\n')
-            
-            #for msg in GPU_msgs:
-            #    print(msg)
-            
-            b = datetime.datetime.now()
-            write_time2csv('Vox2Cortex', t_sec = (b-a).total_seconds(), loading=True)
-            percentUsed,total,free,used = printSpaceUsage(info_flag=True)
-            write_time2csv('Vox2Cortex',percentUsed=percentUsed, total=total, free=free, used=used,loading=True,memory=True)
-
-            a = datetime.datetime.now()
-            results = evaluator.evaluate(
-                model, epoch, save_meshes=len(test_set),
-                remove_previous_meshes=False,
-                store_in_orig_coords=True
-            )
-            b = datetime.datetime.now()
-            write_time2csv('Vox2Cortex', t_sec = (b-a).total_seconds())
-            percentUsed,total,free,used = printSpaceUsage(info_flag=True)
-            write_time2csv('Vox2Cortex',memory=True, percentUsed=percentUsed,total=total,free=free,used=used)
-            
-            #write_test_results(results, mn, test_dir)
-
-            #epochs_tested.append(epoch)
-            # print
-            ### Set Stage
-            stage = '0 - END '+ mn
-            msgs = printSpaceUsage()
-            GPU_msgs.append(stage + msgs + '\n\n\n')
-            print('final messages')     
-            for msg in GPU_msgs:
-                print(msg)
-            
-            
-            exit()
+        # epochs_tested.append(epoch)

@@ -1,0 +1,2 @@
+/v2c/singularity/benchmarks/benchmarkv2.sh: line 7: 4006127 Killed                  python main.py --benchmark --dataset=DATASET_NAME -n hcp
+slurmstepd: error: Detected 1 oom-kill event(s) in StepId=4409624.batch. Some of your processes may have been killed by the cgroup out-of-memory handler.

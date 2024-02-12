@@ -1,0 +1,9 @@
+[INFO] Testing hcp...
+[INFO] Using template ../supplementary_material/templates/cortex_4_smoothed_42016_sps[192, 208, 192]_ps[128, 144, 128].obj
+[INFO] Loading dataset DATASET_NAME...
+Loading images...:   0%|          | 0/1 [00:00<?, ?it/s]Loading images...: 100%|██████████| 1/1 [00:00<00:00,  3.31it/s]Loading images...: 100%|██████████| 1/1 [00:00<00:00,  3.30it/s]
+Loading voxelized meshes...: 0it [00:00, ?it/s]Loading voxelized meshes...: 0it [00:00, ?it/s]
+Loading meshes...:   0%|          | 0/1 [00:00<?, ?it/s]Loading meshes...: 100%|██████████| 1/1 [00:00<00:00,  8.57it/s]Loading meshes...: 100%|██████████| 1/1 [00:00<00:00,  8.54it/s]
+Transform meshes accordingly...: 0it [00:00, ?it/s]Transform meshes accordingly...: 1it [00:00, 195.37it/s]
+Voxelize meshes...:   0%|          | 0/1 [00:00<?, ?it/s]/v2c/singularity/benchmarks/benchmarkv2.sh: line 7: 1714550 Killed                  python main.py --benchmark --dataset=DATASET_NAME -n hcp
+slurmstepd: error: Detected 1 oom-kill event(s) in StepId=4409613.batch. Some of your processes may have been killed by the cgroup out-of-memory handler.

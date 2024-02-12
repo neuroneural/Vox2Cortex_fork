@@ -1,0 +1,11 @@
+aa
+bb
+MODEL_CONFIG <class 'dict'>
+dataset_paths dict_keys(['DATASET_NAME'])
+train_split /v2c/CSR_data/train_ids.txt
+n_min_vertices!!!! (36415, 3)
+n_min_vertices!!!! (35796, 3)
+n_min_vertices!!!! (36415, 3)
+n_min_vertices!!!! (35796, 3)
+Command failed, error and execution time logged to memory_usage_failure.csv.
+Vox2Cortex inference and monitoring have completed.

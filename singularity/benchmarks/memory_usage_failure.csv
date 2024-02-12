@@ -1,0 +1,15 @@
+Mon 12 Feb 2024 01:02:36 AM UTC,Failed with exit status 137, Memory Allocated: 250MB, Execution Time: 4.999204507 seconds
+Mon 12 Feb 2024 01:02:42 AM UTC,Failed with exit status 137, Memory Allocated: 500MB, Execution Time: 11.126359375 seconds
+Mon 12 Feb 2024 01:02:43 AM UTC,Failed with exit status 137, Memory Allocated: 750MB, Execution Time: 12.074036961 seconds
+Mon 12 Feb 2024 01:02:43 AM UTC,Failed with exit status 137, Memory Allocated: 755MB, Execution Time: 12.148998105 seconds
+Mon 12 Feb 2024 01:05:00 AM UTC,Failed with exit status 137, Memory Allocated: 250MB, Execution Time: 4.752860201 seconds
+Mon 12 Feb 2024 01:05:06 AM UTC,Failed with exit status 137, Memory Allocated: 500MB, Execution Time: 11.024692866 seconds
+Mon 12 Feb 2024 01:05:09 AM UTC,Failed with exit status 137, Memory Allocated: 750MB, Execution Time: 14.313579854 seconds
+Mon 12 Feb 2024 01:05:14 AM UTC,Failed with exit status 137, Memory Allocated: 1000MB, Execution Time: 19.124119855 seconds
+Mon 12 Feb 2024 01:05:21 AM UTC,Failed with exit status 137, Memory Allocated: 1250MB, Execution Time: 25.707004448 seconds
+Mon 12 Feb 2024 01:05:22 AM UTC,Failed with exit status 137, Memory Allocated: 1500MB, Execution Time: 26.957261358 seconds
+Mon 12 Feb 2024 01:05:24 AM UTC,Failed with exit status 137, Memory Allocated: 1750MB, Execution Time: 28.499899979 seconds
+Mon 12 Feb 2024 01:05:25 AM UTC,Failed with exit status 137, Memory Allocated: 2000MB, Execution Time: 29.745979843 seconds
+Mon 12 Feb 2024 01:05:26 AM UTC,Failed with exit status 137, Memory Allocated: 2250MB, Execution Time: 30.887810238 seconds
+Mon 12 Feb 2024 01:05:29 AM UTC,Failed with exit status 137, Memory Allocated: 2500MB, Execution Time: 33.377192744 seconds
+Mon 12 Feb 2024 01:05:33 AM UTC,Failed with exit status 137, Memory Allocated: 2750MB, Execution Time: 37.893087028 seconds

@@ -1,0 +1,23 @@
+[INFO] Testing hcp...
+[INFO] Using template ../supplementary_material/templates/cortex_4_smoothed_42016_sps[192, 208, 192]_ps[128, 144, 128].obj
+[INFO] Loading dataset DATASET_NAME...
+Loading images...:   0%|          | 0/1 [00:00<?, ?it/s]Loading images...: 100%|██████████| 1/1 [00:00<00:00,  4.21it/s]Loading images...: 100%|██████████| 1/1 [00:00<00:00,  4.21it/s]
+Loading voxelized meshes...: 0it [00:00, ?it/s]Loading voxelized meshes...: 0it [00:00, ?it/s]
+Loading meshes...:   0%|          | 0/1 [00:00<?, ?it/s]Loading meshes...: 100%|██████████| 1/1 [00:00<00:00,  4.07it/s]Loading meshes...: 100%|██████████| 1/1 [00:00<00:00,  4.06it/s]
+Transform meshes accordingly...: 0it [00:00, ?it/s]Transform meshes accordingly...: 1it [00:00,  3.21it/s]Transform meshes accordingly...: 1it [00:00,  3.21it/s]
+Voxelize meshes...:   0%|          | 0/1 [00:00<?, ?it/s]Voxelize meshes...: 100%|██████████| 1/1 [00:07<00:00,  7.68s/it]Voxelize meshes...: 100%|██████████| 1/1 [00:07<00:00,  7.68s/it]
+Get point labels from meshes...: 0it [00:00, ?it/s]Get point labels from meshes...: 1it [00:00,  1.17it/s]Get point labels from meshes...: 1it [00:00,  1.17it/s]
+[INFO] 1 test files.
+Evaluate...:   0%|          | 0/1 [00:00<?, ?it/s]Evaluate...:   0%|          | 0/1 [00:03<?, ?it/s]
+Traceback (most recent call last):
+  File "main.py", line 269, in <module>
+    main(hyper_ps)
+  File "main.py", line 265, in main
+    loglevel=hps['LOGLEVEL'], resume=args.resume)
+  File "/v2c/vox2cortex/utils/benchmark.py", line 185, in benchmark_routine
+    store_in_orig_coords=True
+  File "/v2c/vox2cortex/utils/bmevaluate.py", line 106, in evaluate
+    convert_to_orig_coords=store_in_orig_coords
+  File "/v2c/vox2cortex/utils/bmevaluate.py", line 228, in store_meshes
+    assert ndims == 3, "Only for 3 dim meshes."
+NameError: name 'ndims' is not defined

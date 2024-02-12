@@ -27,59 +27,26 @@ from utils.logging import (
     write_img_if_debug
 )
 from utils.cortical_thickness import cortical_thickness
-import datetime 
-import nvidia_smi
-
-from csv import writer
-
-''' def write_time2csv(model_name, t_sec):
-    List = [model_name, t_sec]
-    with open('/data/users2/washbee/speedrun/bm.events.csv', 'a') as f_object:
-        writer_object = writer(f_object)
-        writer_object.writerow(List)
-        f_object.close() 
- '''
-nvidia_smi.nvmlInit()
-deviceCount = nvidia_smi.nvmlDeviceGetCount()
-def printSpaceUsage():
-        nvidia_smi.nvmlInit()
-        msgs = ""
-        for i in range(deviceCount):
-            handle = nvidia_smi.nvmlDeviceGetHandleByIndex(i)
-            info = nvidia_smi.nvmlDeviceGetMemoryInfo(handle)
-            #print("Device {}: {}, Memory : ({:.2f}% free): {}(total), {} (free), {} (used)".format(i, nvidia_smi.nvmlDeviceGetName(handle), 100*info.free/info.total, info.total, info.free, info.used))
-            msgs += '\n'
-            msgs += "Device {}: {}, Memory : ({:.2f}% free): {}(total), {} (free), {} (used)".format(i, nvidia_smi.nvmlDeviceGetName(handle), 100*info.free/info.total, info.total, info.free, info.used)
-        nvidia_smi.nvmlShutdown()
-        msgs+="\nMax Memory occupied by tensors: "+ str(torch.cuda.max_memory_allocated(device=None))
-        msgs+="\nMax Memory Cached: "+ str(torch.cuda.max_memory_cached(device=None))
-        msgs+="\nCurrent Memory occupied by tensors: "+ str(torch.cuda.memory_allocated(device=None))
-        msgs+="\nCurrent Memory cached occupied by tensors: "+str(torch.cuda.memory_cached(device=None))
-        msgs+="\n"
-        
-        return msgs
-
-
 
 def add_to_results_(result_dict, metric_name, result):
     """ Helper function to add evaluation results to the result dict."""
     # Extract atomic results
-    if isinstance(result, Sequence):
-        if len(result) == 1:
-            result = result[0]
+    # if isinstance(result, Sequence):
+    #     if len(result) == 1:
+    #         result = result[0]
 
     # Add to dict
-    if metric_name not in result_dict:
-        result_dict[metric_name] = []
-    if not isinstance(result, Sequence): # Atomic result
-        result_dict[metric_name].append(result)
-    else: # Per-structure result
-        result_dict[metric_name].append(np.mean(result))
-        for i, res in enumerate(result):
-            name = metric_name + f"_Struc{i}"
-            if name not in result_dict:
-                result_dict[name] = []
-            result_dict[name].append(res)
+    # if metric_name not in result_dict:
+    #     result_dict[metric_name] = []
+    # if not isinstance(result, Sequence): # Atomic result
+    #     result_dict[metric_name].append(result)
+    # else: # Per-structure result
+    #     result_dict[metric_name].append(np.mean(result))
+    #     for i, res in enumerate(result):
+    #         name = metric_name + f"_Struc{i}"
+    #         if name not in result_dict:
+    #             result_dict[name] = []
+    #         result_dict[name].append(res)
 
 
 class ModelEvaluator():
@@ -114,55 +81,34 @@ class ModelEvaluator():
 
         # Iterate over data split
         for i in tqdm(range(len(self._dataset)), desc="Evaluate..."):
-            a = datetime.datetime.now()
-
             data = self._dataset.get_item_and_mesh_from_index(i)
-            print('0 - write if debug')
-            msg = printSpaceUsage()
-            print(msg)
-
-            write_img_if_debug(data[1].squeeze().cpu().numpy(),
-                               "../misc/raw_voxel_target_img_eval.nii.gz")
-            write_img_if_debug(data[0].squeeze().cpu().numpy(),
-                               "../misc/raw_voxel_input_img_eval.nii.gz")
-            
-            print('0 - model prediction')
-            msg = printSpaceUsage()
-            print(msg)
-            torch.cuda.empty_cache()
+            # write_img_if_debug(data[1].squeeze().cpu().numpy(),
+            #                    "../misc/raw_voxel_target_img_eval.nii.gz")
+            # write_img_if_debug(data[0].squeeze().cpu().numpy(),
+            #                    "../misc/raw_voxel_input_img_eval.nii.gz")
             with torch.no_grad():
                 pred = model(data[0][None].cuda())
-            
-            #a = datetime.datetime.now()
-            """for metric in self._eval_metrics:
-                res = EvalMetricHandler[metric](pred, data,
-                                                self._n_v_classes,
-                                                self._n_m_classes,
-                                                model_class)
-                add_to_results_(results_all, metric, res)
-            """
-            print('0 - after model prediction/ save (evaluator.evaluate)')
-            msg = printSpaceUsage()
-            print(msg)
-            if i < save_meshes: # Store meshes for visual inspection
+
+            # for metric in self._eval_metrics:
+            #     res = EvalMetricHandler[metric](pred, data,
+            #                                     self._n_v_classes,
+            #                                     self._n_m_classes,
+            #                                     model_class)
+            #     add_to_results_(results_all, metric, res)
+
+            # if i < save_meshes: # Store meshes for visual inspection
+            if True: # Store meshes for visual inspection
                 filename =\
                         self._dataset.get_file_name_from_index(i).split(".")[0]
                 self.store_meshes(
                     pred, data, filename, epoch, model_class,
-                    remove_previous=remove_previous_meshes,
+                    remove_previous=False,
                     convert_to_orig_coords=store_in_orig_coords
                 )
-            b = datetime.datetime.now()
-            t_sec = (b-a).total_seconds()
-            #write_time2csv('Vox2Cortex', t_sec)
-           
-            print('total seconds for one batch is {}'.format(t_sec))
-            #exit()
-            return ""#!!!!!!!!!!!!!!
 
         # Just consider means over evaluation set
-        results = {k: np.mean(v) for k, v in results_all.items()}
-
+        # results = {k: np.mean(v) for k, v in results_all.items()}
+        results = {}
         return results
 
     def store_meshes(self, pred, data, filename, epoch, model_class,
@@ -176,57 +122,58 @@ class ModelEvaluator():
                 os.mkdir(subdir)
 
         # Remove previously stored files to avoid dumping storage
-        if remove_previous:
-            for suffix in ("*_meshpred.ply", "*_voxelpred.ply",
-                           "*_meshpred.png", "*_voxelpred.png"):
-                files_to_delete = glob.glob(os.path.join(
-                    self._mesh_dir, filename + suffix
-                ))
-                for f in files_to_delete:
-                    try:
-                        os.remove(f)
-                    except:
-                        print("Error while deleting file ", f)
+        # if remove_previous:
+        #     for suffix in ("*_meshpred.ply", "*_voxelpred.ply",
+        #                    "*_meshpred.png", "*_voxelpred.png"):
+        #         files_to_delete = glob.glob(os.path.join(
+        #             self._mesh_dir, filename + suffix
+        #         ))
+        #         for f in files_to_delete:
+        #             try:
+        #                 os.remove(f)
+        #             except:
+        #                 print("Error while deleting file ", f)
         # Data
         img = data[0].squeeze()
-        if img.ndim == 3:
-            img_filename = filename + "_mri.nii.gz"
-            img_filename = os.path.join(self._mesh_dir, img_filename)
-            if not os.path.isfile(img_filename):
-                nib_img = nib.Nifti1Image(img.cpu().numpy(), np.eye(4))
-                nib.save(nib_img, img_filename)
+        # if img.ndim == 3:
+        #     img_filename = filename + "_mri.nii.gz"
+        #     img_filename = os.path.join(self._mesh_dir, img_filename)
+        #     if not os.path.isfile(img_filename):
+        #         nib_img = nib.Nifti1Image(img.cpu().numpy(), np.eye(4))
+        #         nib.save(nib_img, img_filename)
 
         # Label
         gt_mesh = data[2]
         ndims = gt_mesh.ndims
-        logging.getLogger(ExecModes.TEST.name).debug(
-            "%d vertices in ground truth mesh",
-            len(gt_mesh.vertices.view(-1, ndims))
-        )
+        # logging.getLogger(ExecModes.TEST.name).debug(
+        #     "%d vertices in ground truth mesh",
+        #     len(gt_mesh.vertices.view(-1, ndims))
+        # )
         # Store ground truth if it does not exist yet
-        if ndims == 3:
-            trans_affine = data[3]
-            # Back to original coordinate space
-            if convert_to_orig_coords:
-                new_vertices, new_faces = transform_mesh_affine(
-                    gt_mesh.vertices, gt_mesh.faces, np.linalg.inv(trans_affine)
-                )
-            else:
-                new_vertices, new_faces = gt_mesh.vertices, gt_mesh.faces
-            gt_mesh_transformed = Mesh(new_vertices, new_faces, features=gt_mesh.features)
-            gt_filename = filename + "_gt.ply"
-            gt_filename = os.path.join(self._mesh_dir, gt_filename)
-            if not os.path.isfile(gt_filename):
-                if self._n_m_classes in (2, 4):
-                    gt_mesh_transformed.store_with_features(gt_filename)
-                else:
-                    gt_mesh_transformed.store(gt_filename)
-        else:
-            raise ValueError("Wrong dimensionality.")
+        # if ndims == 3:
+        #     trans_affine = data[3]
+        #     # Back to original coordinate space
+        #     if convert_to_orig_coords:
+        #         new_vertices, new_faces = transform_mesh_affine(
+        #             gt_mesh.vertices, gt_mesh.faces, np.linalg.inv(trans_affine)
+        #         )
+        #     else:
+        #         new_vertices, new_faces = gt_mesh.vertices, gt_mesh.faces
+        #     gt_mesh_transformed = Mesh(new_vertices, new_faces, features=gt_mesh.features)
+        #     gt_filename = filename + "_gt.ply"
+        #     gt_filename = os.path.join(self._mesh_dir, gt_filename)
+        #     if not os.path.isfile(gt_filename):
+        #         if self._n_m_classes in (2, 4):
+        #             gt_mesh_transformed.store_with_features(gt_filename)
+        #         else:
+        #             gt_mesh_transformed.store(gt_filename)
+        # else:
+        #     raise ValueError("Wrong dimensionality.")
 
         # Mesh prediction
         vertices, faces = model_class.pred_to_verts_and_faces(pred)
-        if show_all_steps:
+        # if show_all_steps:
+        if False:
             # Visualize meshes of all steps
             for s, (v_, f_) in enumerate(zip(vertices, faces)):
                 v, f = v_.squeeze(), f_.squeeze()
@@ -250,9 +197,9 @@ class ModelEvaluator():
                         m.store_with_features(pred_mesh_filename)
                 else: # Do not consider structures separately
                     pred_mesh = Mesh(v.cpu(), f.cpu())
-                    logging.getLogger(ExecModes.TEST.name).debug(
-                        "%d vertices in predicted mesh", len(v.view(-1, ndims))
-                    )
+                    # logging.getLogger(ExecModes.TEST.name).debug(
+                    #     "%d vertices in predicted mesh", len(v.view(-1, ndims))
+                    # )
                     if ndims == 3:
                         pred_mesh_filename = filename + "_epoch" + str(epoch) +\
                             "_step" + str(s) + "_meshpred.ply"
@@ -277,11 +224,11 @@ class ModelEvaluator():
             # Only visualize last step
             v, f = vertices[-1].squeeze(), faces[-1].squeeze()
             # Optionally transform back to original coordinates
-            if convert_to_orig_coords:
-                assert ndims == 3, "Only for 3 dim meshes."
-                v, f = transform_mesh_affine(
-                    v, f, np.linalg.inv(trans_affine)
-                )
+            # if convert_to_orig_coords:
+            #     assert ndims == 3, "Only for 3 dim meshes."
+            #     v, f = transform_mesh_affine(
+            #         v, f, np.linalg.inv(trans_affine)
+            #     )
             if self._n_m_classes in (2, 4) and convert_to_orig_coords:
                 # Meshes with thickness
                 pred_meshes = cortical_thickness(v, f)
@@ -294,9 +241,9 @@ class ModelEvaluator():
                     m.store_with_features(pred_mesh_filename)
             else: # Do not consider structures separately
                 pred_mesh = Mesh(v.cpu(), f.cpu())
-                logging.getLogger(ExecModes.TEST.name).debug(
-                    "%d vertices in predicted mesh", len(v.view(-1, ndims))
-                )
+                # logging.getLogger(ExecModes.TEST.name).debug(
+                #     "%d vertices in predicted mesh", len(v.view(-1, ndims))
+                # )
                 if ndims == 3:
                     pred_mesh_filename = filename + "_epoch" + str(epoch) +\
                         "_meshpred.ply"
@@ -320,7 +267,8 @@ class ModelEvaluator():
                     )
 
         # Voxel prediction
-        voxel_pred = model_class.pred_to_voxel_pred(pred)
+        #voxel_pred = model_class.pred_to_voxel_pred(pred)
+        voxel_pred = None
         if voxel_pred is not None: # voxel_pred can be empty
             for c in range(1, self._n_v_classes):
                 voxel_pred_class = voxel_pred.squeeze()

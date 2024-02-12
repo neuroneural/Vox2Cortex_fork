@@ -99,11 +99,8 @@ def main(hps):
                            " If no epoch is specified, the best (w.r.t. IoU)"
                            " and the last model are evaluated.")
     argparser.add_argument('--benchmark',
-            type=int,
-            default=None,
-            nargs='?',
-            const=-1,
-            help="Test a model, optionally specified by epoch.  If no epoch is specified, the best (w.r.t. IoU) and the last model are evaluated.")
+                            action='store_true',
+                            help="Test a model, optionally specified by epoch.  If no epoch is specified, the best (w.r.t. IoU) and the last model are evaluated.")
 
     argparser.add_argument('--tune',
                            default=None,

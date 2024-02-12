@@ -1,0 +1,15 @@
+aa
+bb
+MODEL_CONFIG <class 'dict'>
+dataset_paths dict_keys(['DATASET_NAME'])
+train_split /v2c/CSR_data/train_ids.txt
+[Warning] No mesh for file 201818/lh_white_reduced_0.3, inserting dummy.
+n_min_vertices!!!! (12, 3)
+[Warning] No mesh for file 201818/rh_white_reduced_0.3, inserting dummy.
+n_min_vertices!!!! (12, 3)
+[Warning] No mesh for file 201818/lh_pial_reduced_0.3, inserting dummy.
+n_min_vertices!!!! (12, 3)
+[Warning] No mesh for file 201818/rh_pial_reduced_0.3, inserting dummy.
+n_min_vertices!!!! (12, 3)
+Command failed, error and execution time logged to memory_usage_failure.csv.
+Vox2Cortex inference and monitoring have completed.

@@ -1,0 +1,7 @@
+aa
+bb
+MODEL_CONFIG <class 'dict'>
+dataset_paths dict_keys(['DATASET_NAME'])
+train_split /v2c/CSR_data/train_ids.txt
+Command failed, error and execution time logged to memory_usage_failure.csv.
+Vox2Cortex inference and monitoring have completed.

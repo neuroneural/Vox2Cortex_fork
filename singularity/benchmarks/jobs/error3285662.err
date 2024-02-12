@@ -1,0 +1,10 @@
+[INFO] Testing hcp...
+[INFO] Using template ../supplementary_material/templates/cortex_4_smoothed_42016_sps[192, 208, 192]_ps[128, 144, 128].obj
+Traceback (most recent call last):
+  File "main.py", line 272, in <module>
+    main(hyper_ps)
+  File "main.py", line 268, in main
+    loglevel=hps['LOGLEVEL'], resume=args.resume)
+  File "/v2c/vox2cortex/utils/benchmark.py", line 212, in benchmark_routine
+    GPU_msgs.append(stage + msgs + '\n\n\n')
+TypeError: can only concatenate str (not "tuple") to str

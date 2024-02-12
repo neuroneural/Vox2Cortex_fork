@@ -1,0 +1,19 @@
+aa
+bb
+MODEL_CONFIG <class 'dict'>
+dataset_paths dict_keys(['DATASET_NAME'])
+train_split /v2c/CSR_data/train_ids.txt
+[Warning] No mesh for file 201818/lh_white_reduced_0.3, inserting dummy.
+n_min_vertices!!!! (12, 3)
+[Warning] No mesh for file 201818/rh_white_reduced_0.3, inserting dummy.
+n_min_vertices!!!! (12, 3)
+[Warning] No mesh for file 201818/lh_pial_reduced_0.3, inserting dummy.
+n_min_vertices!!!! (12, 3)
+[Warning] No mesh for file 201818/rh_pial_reduced_0.3, inserting dummy.
+n_min_vertices!!!! (12, 3)
+[Warning] File /v2c/CSR_data/201818/lh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/201818/rh_white_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/201818/lh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+[Warning] File /v2c/CSR_data/201818/rh_pial_reduced_0.3.thickness could not be found, inserting dummy.
+Command executed successfully, memory usage and execution time (in seconds) logged to memory_usage_success.csv.
+Vox2Cortex inference and monitoring have completed.
