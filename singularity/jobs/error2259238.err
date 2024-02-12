@@ -1,50 +1,0 @@
-[INFO] Testing hcp...
-[INFO] Using template ../supplementary_material/templates/cortex_4_smoothed_42016_sps[192, 208, 192]_ps[128, 144, 128].obj
-/opt/miniconda3/envs/vox2cortex/lib/python3.7/site-packages/torch/cuda/memory.py:354: FutureWarning: torch.cuda.max_memory_cached has been renamed to torch.cuda.max_memory_reserved
-  FutureWarning)
-/opt/miniconda3/envs/vox2cortex/lib/python3.7/site-packages/torch/cuda/memory.py:346: FutureWarning: torch.cuda.memory_cached has been renamed to torch.cuda.memory_reserved
-  FutureWarning)
-[INFO] Loading dataset DATASET_NAME...
-Loading images...:   0%|          | 0/1 [00:00<?, ?it/s]Loading images...: 100%|██████████| 1/1 [00:00<00:00,  2.17it/s]Loading images...: 100%|██████████| 1/1 [00:00<00:00,  2.17it/s]
-Loading voxelized meshes...: 0it [00:00, ?it/s]Loading voxelized meshes...: 0it [00:00, ?it/s]
-Loading meshes...:   0%|          | 0/1 [00:00<?, ?it/s]Loading meshes...: 100%|██████████| 1/1 [00:01<00:00,  1.03s/it]Loading meshes...: 100%|██████████| 1/1 [00:01<00:00,  1.03s/it]
-Transform meshes accordingly...: 0it [00:00, ?it/s]Transform meshes accordingly...: 1it [00:00,  4.59it/s]Transform meshes accordingly...: 1it [00:00,  4.58it/s]
-Voxelize meshes...:   0%|          | 0/1 [00:00<?, ?it/s]Voxelize meshes...: 100%|██████████| 1/1 [00:05<00:00,  5.15s/it]Voxelize meshes...: 100%|██████████| 1/1 [00:05<00:00,  5.15s/it]
-Get point labels from meshes...: 0it [00:00, ?it/s]Get point labels from meshes...: 1it [00:00,  1.80it/s]Get point labels from meshes...: 1it [00:00,  1.80it/s]
-[INFO] 1 test files.
-[INFO] Test model /v2c/experiments/hcp/best.model stored in training epoch 86
-Evaluate...:   0%|          | 0/1 [00:00<?, ?it/s]Evaluate...:   0%|          | 0/1 [00:06<?, ?it/s]
-Traceback (most recent call last):
-  File "main.py", line 260, in <module>
-    main(hyper_ps)
-  File "main.py", line 256, in main
-    loglevel=hps['LOGLEVEL'], resume=args.resume)
-  File "/v2c/vox2cortex/utils/test.py", line 271, in test_routine
-    store_in_orig_coords=True
-  File "/v2c/vox2cortex/utils/evaluate.py", line 116, in evaluate
-    pred = model(data[0][None].cuda())
-  File "/opt/miniconda3/envs/vox2cortex/lib/python3.7/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
-    result = self.forward(*input, **kwargs)
-  File "/v2c/vox2cortex/utils/logging.py", line 252, in time_wrapper
-    return_value = func(*args, **kwargs)
-  File "/v2c/vox2cortex/models/vox2cortex.py", line 121, in forward
-    pred_meshes, pred_deltaV = self.graph_net(encoder_skips + decoder_skips)
-  File "/opt/miniconda3/envs/vox2cortex/lib/python3.7/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
-    result = self.forward(*input, **kwargs)
-  File "/v2c/vox2cortex/utils/logging.py", line 252, in time_wrapper
-    return_value = func(*args, **kwargs)
-  File "/v2c/vox2cortex/models/graph_net.py", line 238, in forward
-    latent_features = self.graph_conv_first(verts_packed, edges_packed)
-  File "/opt/miniconda3/envs/vox2cortex/lib/python3.7/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
-    result = self.forward(*input, **kwargs)
-  File "/v2c/vox2cortex/utils/utils_vox2cortex/graph_conv.py", line 80, in forward
-    features = F.relu(self.norm_first(self.gconv_first(features, edges)))
-  File "/opt/miniconda3/envs/vox2cortex/lib/python3.7/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
-    result = self.forward(*input, **kwargs)
-  File "/v2c/vox2cortex/utils/utils_vox2cortex/graph_conv.py", line 35, in forward
-    return D_inv * super().forward(verts, edges)
-  File "/opt/miniconda3/envs/vox2cortex/lib/python3.7/site-packages/pytorch3d/ops/graph_conv.py", line 76, in forward
-    neighbor_sums = gather_scatter(verts_w1, edges, self.directed)
-  File "/opt/miniconda3/envs/vox2cortex/lib/python3.7/site-packages/pytorch3d/ops/graph_conv.py", line 160, in forward
-    output = _C.gather_scatter(input, edges, directed, backward)
-RuntimeError: CUDA error: no kernel image is available for execution on the device

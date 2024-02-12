@@ -1,24 +1,0 @@
-wandb: WARNING `resume` will be ignored since W&B syncing is set to `offline`. Starting a new run with run id hcp.
-wandb: W&B syncing is set to `offline` in this directory.  
-wandb: Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
-[INFO] Start training 'hcp'...
-[INFO] Loading dataset DATASET_NAME...
-Loading images...: 0it [00:00, ?it/s]Loading images...: 0it [00:00, ?it/s]
-Loading voxelized meshes...: 0it [00:00, ?it/s]Loading voxelized meshes...: 0it [00:00, ?it/s]
-Loading meshes...: 0it [00:00, ?it/s]Loading meshes...: 0it [00:00, ?it/s]
-Transform meshes accordingly...: 0it [00:00, ?it/s]Transform meshes accordingly...: 0it [00:00, ?it/s]
-Get point labels from meshes...: 0it [00:00, ?it/s]Get point labels from meshes...: 0it [00:00, ?it/s]
-Loading images...: 0it [00:00, ?it/s]Loading images...: 0it [00:00, ?it/s]
-Loading voxelized meshes...: 0it [00:00, ?it/s]Loading voxelized meshes...: 0it [00:00, ?it/s]
-Loading meshes...: 0it [00:00, ?it/s]Loading meshes...: 0it [00:00, ?it/s]
-Transform meshes accordingly...: 0it [00:00, ?it/s]Transform meshes accordingly...: 0it [00:00, ?it/s]
-Get point labels from meshes...: 0it [00:00, ?it/s]Get point labels from meshes...: 0it [00:00, ?it/s]
-[INFO] 0 training files.
-[INFO] 0 validation files.
-[WARNING] Most likely you haven't configured training data correctly
-[WARNING] error caught in train.py, exiting
-wandb: Waiting for W&B process to finish, PID 4065849... (success).
-wandb: You can sync this run to the cloud by running:
-wandb: wandb sync /v2c/experiments/hcp/logs/wandb/offline-run-20221230_204914-hcp
-wandb: Find logs at: /v2c/experiments/hcp/logs/wandb/offline-run-20221230_204914-hcp/logs/debug.log
-wandb: 
